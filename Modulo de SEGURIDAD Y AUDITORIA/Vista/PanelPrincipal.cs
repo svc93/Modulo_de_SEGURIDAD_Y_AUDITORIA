@@ -99,12 +99,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
           
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            Debug.Assert(formUsuarios == null);
-            _Comandos.UsuarioComandos.Nuevo.Enabled = false; // Disable new client command to prevent re-entrancy
-            formUsuarios = new Usuarios();
-            formUsuarios.Commandos = _Comandos;
-            //manda abrir el form usuario deslizadooooooo
-            this.ShowModalPanel(formUsuarios, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+            
         }
          
          
@@ -165,7 +160,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.Auditoria});
             this.metroTilePanel1.Location = new System.Drawing.Point(0, 0);
             this.metroTilePanel1.Name = "metroTilePanel1";
-            this.metroTilePanel1.Size = new System.Drawing.Size(877, 470);
+            this.metroTilePanel1.Size = new System.Drawing.Size(877, 473);
             this.metroTilePanel1.TabIndex = 0;
             this.metroTilePanel1.Text = "metroTilePanel1";
             // 
@@ -202,6 +197,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             // 
             this.btnMetroUsuarios.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.btnMetroUsuarios.Click += new System.EventHandler(this.btnMetroUsuarios_Click);
             // 
             // metroTileItem3
             // 
@@ -346,6 +342,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(1, 1);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -360,6 +357,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.splitContainer1.Panel2.Controls.Add(this.metroTilePanel1);
             this.splitContainer1.Size = new System.Drawing.Size(877, 567);
             this.splitContainer1.SplitterDistance = 93;
+            this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 9;
             // 
             // timerLogin
@@ -377,8 +375,13 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.ClientSize = new System.Drawing.Size(879, 569);
             this.Controls.Add(this.metroShell1);
             this.Controls.Add(this.splitContainer1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PanelPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PanelPrincipal_Load_1);
+            this.Resize += new System.EventHandler(this.PanelPrincipal_Resize);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -386,12 +389,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.ResumeLayout(false);
 
         }
-
-        private void PanelPrincipal_Load(object sender, EventArgs e)
-        {
-            
-        }
-
+          
         private void timer2_Tick(object sender, EventArgs e)
         {
             timerLogin.Stop();
@@ -429,6 +427,21 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             loginForm = new LoginUsuario();
             loginForm.Commandos = _Comandos;
             this.ShowModalPanel(loginForm, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+        }
+
+        private void btnMetroUsuarios_Click(object sender, EventArgs e)
+        {
+            Debug.Assert(formUsuarios == null);
+            _Comandos.UsuarioComandos.Nuevo.Enabled = false; // Disable new client command to prevent re-entrancy
+            formUsuarios = new Usuarios();
+            formUsuarios.Commandos = _Comandos;
+            //manda abrir el form usuario deslizadooooooo
+            this.ShowModalPanel(formUsuarios, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+        }
+
+        private void PanelPrincipal_Resize(object sender, EventArgs e)
+        {
+
         }
     }
 }
