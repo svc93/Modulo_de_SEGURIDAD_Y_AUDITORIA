@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Seguridad_y_Auditoría));
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.metroShell1 = new DevComponents.DotNetBar.Metro.MetroShell();
             this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
@@ -135,20 +136,23 @@
             // 
             this.itemContainer1.TitleStyle.Class = "MetroTileGroupTitle";
             this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer1.TitleText = "Panel de Control";
+            this.itemContainer1.TitleText = "Panel de Seguridad";
             // 
             // btnUsuarios
             // 
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
+            this.btnUsuarios.ImageTextAlignment = System.Drawing.ContentAlignment.BottomLeft;
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.SymbolColor = System.Drawing.Color.Empty;
+            this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blue;
             // 
             // 
             // 
             this.btnUsuarios.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.btnUsuarios.TitleText = "Usuarios";
             this.btnUsuarios.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUsuarios.Tooltip = "Panel de los Usuarios";
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // metroTileItem2
@@ -180,14 +184,17 @@
             // metroTileItem4
             // 
             this.metroTileItem4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem4.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem4.Image")));
+            this.metroTileItem4.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroTileItem4.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
             this.metroTileItem4.Name = "metroTileItem4";
             this.metroTileItem4.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem4.Text = "Catálogo de Estados Login";
             this.metroTileItem4.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedViolet;
             // 
             // 
             // 
             this.metroTileItem4.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem4.TitleText = "Catálogo Estados Login";
             this.metroTileItem4.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroTileItem9
@@ -219,14 +226,17 @@
             // metroTileItem11
             // 
             this.metroTileItem11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem11.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem11.Image")));
+            this.metroTileItem11.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroTileItem11.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
             this.metroTileItem11.Name = "metroTileItem11";
             this.metroTileItem11.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem11.Text = "Catálogo De Áreas";
             this.metroTileItem11.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
             // 
             // 
             // 
             this.metroTileItem11.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem11.TitleText = "Catálogo De Áreas";
             this.metroTileItem11.TitleTextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroTileItem12

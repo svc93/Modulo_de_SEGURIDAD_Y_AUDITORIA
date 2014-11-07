@@ -1,0 +1,9 @@
+c:\users\willy\documents\visual studio 2012\Projects\inicio\inicio\bin\Debug\inicio.exe.config
+C:\Users\willy\Documents\Visual Studio 2012\Projects\inicio\inicio\bin\Debug\inicio.exe
+C:\Users\willy\Documents\Visual Studio 2012\Projects\inicio\inicio\bin\Debug\inicio.pdb
+C:\Users\willy\Documents\Visual Studio 2012\Projects\inicio\inicio\obj\Debug\inicio.csprojResolveAssemblyReference.cache
+C:\Users\willy\Documents\Visual Studio 2012\Projects\inicio\inicio\obj\Debug\inicio.Inicio.resources
+C:\Users\willy\Documents\Visual Studio 2012\Projects\inicio\inicio\obj\Debug\inicio.Properties.Resources.resources
+C:\Users\willy\Documents\Visual Studio 2012\Projects\inicio\inicio\obj\Debug\inicio.csproj.GenerateResource.Cache
+C:\Users\willy\Documents\Visual Studio 2012\Projects\inicio\inicio\obj\Debug\inicio.exe
+C:\Users\willy\Documents\Visual Studio 2012\Projects\inicio\inicio\obj\Debug\inicio.pdb

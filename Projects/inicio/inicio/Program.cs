@@ -1,11 +1,10 @@
-﻿using Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Modulo_de_SEGURIDAD_Y_AUDITORIA
+namespace inicio
 {
     static class Program
     {
@@ -17,7 +16,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PanelPrincipal());
+            Application.Run(new Inicio());
         }
     }
 }
