@@ -57,6 +57,7 @@
             // 
             this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancelar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(122, 133);
             this.btnCancelar.Name = "btnCancelar";
@@ -93,7 +94,7 @@
             this.txtUsuario.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
             this.txtUsuario.DisabledBackColor = System.Drawing.Color.White;
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtUsuario.Location = new System.Drawing.Point(122, 51);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PreventEnterBeep = true;
@@ -114,7 +115,7 @@
             this.txtContrasena.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
             this.txtContrasena.DisabledBackColor = System.Drawing.Color.White;
             this.txtContrasena.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.ForeColor = System.Drawing.Color.SteelBlue;
+            this.txtContrasena.ForeColor = System.Drawing.Color.Black;
             this.txtContrasena.Location = new System.Drawing.Point(122, 88);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = 'o';
@@ -141,6 +142,7 @@
             // 
             this.btnEntrar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnEntrar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.Location = new System.Drawing.Point(235, 133);
             this.btnEntrar.Name = "btnEntrar";

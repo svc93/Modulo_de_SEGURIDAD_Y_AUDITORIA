@@ -68,6 +68,9 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             else {
                 loginForm.btnCancelar.Visible = false;
                 loginForm.btnEntrar.Visible = false;
+                loginForm.txtUsuario.Enabled = false;
+                loginForm.txtContrasena.Enabled = false;
+
 
                 loginForm.progressCircleLogin.Visible = true;
                 timerLogin.Start();
@@ -132,6 +135,9 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             {
                 loginForm.btnCancelar.Visible = true;
                 loginForm.btnEntrar.Visible = true;
+
+                loginForm.txtUsuario.Enabled = true;
+                loginForm.txtContrasena.Enabled = true;
 
                 loginForm.progressCircleLogin.Visible = false;
                 ToastNotification.Show(this, "Datos Incorrectos, intente nuevamente", null, 2000, (eToastGlowColor)(eToastGlowColor.Red), (eToastPosition)(eToastPosition.BottomCenter));
