@@ -20,5 +20,9 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Timer timerLogin;
         private System.Windows.Forms.Timer timer2;
+        private DevComponents.DotNetBar.Controls.Line line1;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem1;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem9;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem10;
     }
 }

@@ -72,7 +72,6 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -88,7 +87,6 @@
             this.txtUsuario.ButtonCustom2.Tooltip = "";
             this.txtUsuario.DisabledBackColor = System.Drawing.Color.White;
             this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtUsuario.Location = new System.Drawing.Point(122, 51);
             this.txtUsuario.MaxLength = 17;
             this.txtUsuario.Name = "txtUsuario";
@@ -101,7 +99,6 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -117,7 +114,6 @@
             this.txtContrasena.ButtonCustom2.Tooltip = "";
             this.txtContrasena.DisabledBackColor = System.Drawing.Color.White;
             this.txtContrasena.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.ForeColor = System.Drawing.Color.Black;
             this.txtContrasena.Location = new System.Drawing.Point(122, 88);
             this.txtContrasena.MaxLength = 17;
             this.txtContrasena.Name = "txtContrasena";
@@ -138,7 +134,7 @@
             // 
             // styleManager1
             // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2013;
+            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Black;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
             // btnEntrar

@@ -125,6 +125,10 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.timerLogin = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -155,6 +159,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTilePanel1.ContainerControlProcessDialogKey = true;
             this.metroTilePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTilePanel1.DragDropSupport = true;
+            this.metroTilePanel1.ForeColor = System.Drawing.Color.Black;
             this.metroTilePanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.Seguridad,
             this.Auditoria});
@@ -176,7 +181,10 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.btnMetroUsuarios,
             this.metroTileItem2,
             this.metroTileItem3,
-            this.metroTileItem4});
+            this.metroTileItem4,
+            this.metroTileItem1,
+            this.metroTileItem9,
+            this.metroTileItem10});
             this.Seguridad.Text = "Seguridad";
             // 
             // 
@@ -204,6 +212,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTileItem3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTileItem3.Name = "metroTileItem3";
             this.metroTileItem3.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem3.Text = "Permisos Roles";
             this.metroTileItem3.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
             // 
             // 
@@ -215,6 +224,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTileItem4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTileItem4.Name = "metroTileItem4";
             this.metroTileItem4.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem4.Text = "Roles de Usuario";
             this.metroTileItem4.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
             // 
             // 
@@ -258,6 +268,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             this.metroTileItem6.Name = "metroTileItem6";
             this.metroTileItem6.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem6.Text = "Auditar Usuario";
             this.metroTileItem6.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
             // 
             // 
@@ -268,6 +279,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             this.metroTileItem7.Name = "metroTileItem7";
             this.metroTileItem7.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem7.Text = "ETC";
             this.metroTileItem7.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
             // 
             // 
@@ -333,6 +345,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Lucida Sans", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
             this.labelX1.Location = new System.Drawing.Point(3, 52);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(313, 23);
@@ -341,8 +354,10 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             // splitContainer1
             // 
+            this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.ForeColor = System.Drawing.Color.Black;
             this.splitContainer1.Location = new System.Drawing.Point(1, 1);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -351,10 +366,14 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel1.Controls.Add(this.labelX1);
+            this.splitContainer1.Panel1.Controls.Add(this.line1);
+            this.splitContainer1.Panel1.ForeColor = System.Drawing.Color.Black;
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.splitContainer1.Panel2.Controls.Add(this.metroTilePanel1);
+            this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.Black;
             this.splitContainer1.Size = new System.Drawing.Size(877, 567);
             this.splitContainer1.SplitterDistance = 93;
             this.splitContainer1.SplitterWidth = 1;
@@ -370,8 +389,51 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // line1
+            // 
+            this.line1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.line1.Location = new System.Drawing.Point(0, 70);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(877, 23);
+            this.line1.TabIndex = 1;
+            this.line1.Text = "line1";
+            // 
+            // metroTileItem1
+            // 
+            this.metroTileItem1.Name = "metroTileItem1";
+            this.metroTileItem1.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem1.Text = "Exportar Usuarios Bloqueados";
+            this.metroTileItem1.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
+            // 
+            // 
+            // 
+            this.metroTileItem1.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // metroTileItem9
+            // 
+            this.metroTileItem9.Name = "metroTileItem9";
+            this.metroTileItem9.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem9.Text = "Empleados";
+            this.metroTileItem9.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
+            // 
+            // 
+            // 
+            this.metroTileItem9.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // metroTileItem10
+            // 
+            this.metroTileItem10.Name = "metroTileItem10";
+            this.metroTileItem10.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem10.Text = "Respaldos";
+            this.metroTileItem10.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
+            // 
+            // 
+            // 
+            this.metroTileItem10.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
             // PanelPrincipal
             // 
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(879, 569);
             this.Controls.Add(this.metroShell1);
             this.Controls.Add(this.splitContainer1);
@@ -434,6 +496,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             Debug.Assert(formUsuarios == null);
             _Comandos.UsuarioComandos.Nuevo.Enabled = false; // Disable new client command to prevent re-entrancy
             formUsuarios = new Usuarios();
+            formUsuarios.MaximumSize = true;
             formUsuarios.Commandos = _Comandos;
             //manda abrir el form usuario deslizadooooooo
             this.ShowModalPanel(formUsuarios, DevComponents.DotNetBar.Controls.eSlideSide.Left);
