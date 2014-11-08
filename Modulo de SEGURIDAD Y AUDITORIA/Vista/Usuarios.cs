@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroBill; 
+using MetroBill;
+using Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos; 
 
 namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 {
@@ -44,6 +45,17 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             {
                 btnSalir.Command = null; 
             }
+        }
+
+        private void Usuarios_Load(object sender, EventArgs e)
+        {
+            Usuario datosUsuarios = new Usuario();
+            usuarioBindingSource1.DataSource = datosUsuarios.tUsuarios(); 
+        }
+
+        private void panelEx1_Click(object sender, EventArgs e)
+        {
+
         }
          
           

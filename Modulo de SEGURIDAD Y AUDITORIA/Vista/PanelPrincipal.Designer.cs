@@ -13,7 +13,6 @@
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem5;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem6;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem7;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem8;
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.Metro.MetroShell metroShell1;
         private DevComponents.DotNetBar.LabelX labelX1;
@@ -24,5 +23,13 @@
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem1;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem9;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem10;
+        private DevComponents.DotNetBar.ItemContainer Módulos;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem11;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem12;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem13;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem14;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem15;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem16;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

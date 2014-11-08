@@ -57,6 +57,16 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             //progressCircleLogin.Update();
         }
 
+        private void textBoxX1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxX2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }
