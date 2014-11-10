@@ -1,6 +1,6 @@
 ﻿namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 {
-    partial class Usuarios
+    partial class CatEstadosLogin
     {
         /// <summary> 
         /// Variable del diseñador requerida.
@@ -29,19 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
-            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatEstadosLogin));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.dgvUsuarios = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cédulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEstados = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.idEstadoLoginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripciónDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoLoginBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sISTEMADataSet = new Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos.Dataset.SISTEMADataSet();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
@@ -58,17 +56,12 @@
             this.bindingNavigatorMoveNextItem = new DevComponents.DotNetBar.ButtonItem();
             this.bindingNavigatorMoveLastItem = new DevComponents.DotNetBar.ButtonItem();
             this.panelEx1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoLoginBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEx1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // styleManager1
-            // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Black;
-            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
             // panelEx1
             // 
@@ -76,7 +69,7 @@
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.bindingNavigatorEx1);
             this.panelEx1.Controls.Add(this.labelX1);
-            this.panelEx1.Controls.Add(this.dgvUsuarios);
+            this.panelEx1.Controls.Add(this.dgvEstados);
             this.panelEx1.Controls.Add(this.buttonX3);
             this.panelEx1.Controls.Add(this.buttonX2);
             this.panelEx1.Controls.Add(this.buttonX1);
@@ -88,7 +81,7 @@
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(681, 456);
+            this.panelEx1.Size = new System.Drawing.Size(797, 493);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.LightSteelBlue;
             this.panelEx1.Style.BackColor2.Color = System.Drawing.Color.RoyalBlue;
@@ -97,8 +90,7 @@
             this.panelEx1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 9;
-            this.panelEx1.Click += new System.EventHandler(this.panelEx1_Click);
+            this.panelEx1.TabIndex = 11;
             // 
             // labelX1
             // 
@@ -111,73 +103,51 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(155, 23);
             this.labelX1.TabIndex = 14;
-            this.labelX1.Text = "Todos los Usuarios:";
+            this.labelX1.Text = "Todos los estados:";
             // 
-            // dgvUsuarios
+            // dgvEstados
             // 
-            this.dgvUsuarios.AllowUserToAddRows = false;
-            this.dgvUsuarios.AllowUserToDeleteRows = false;
-            this.dgvUsuarios.AutoGenerateColumns = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idUsuarioDataGridViewTextBoxColumn,
-            this.contraseñaDataGridViewTextBoxColumn,
-            this.cédulaDataGridViewTextBoxColumn,
-            this.idEstadoLoginDataGridViewTextBoxColumn});
-            this.dgvUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvUsuarios.DataSource = this.usuarioBindingSource1;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvUsuarios.EnableHeadersVisualStyles = false;
-            this.dgvUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dgvUsuarios.Location = new System.Drawing.Point(0, 137);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvUsuarios.Size = new System.Drawing.Size(681, 294);
-            this.dgvUsuarios.TabIndex = 13;
-            // 
-            // idUsuarioDataGridViewTextBoxColumn
-            // 
-            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
-            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contraseñaDataGridViewTextBoxColumn
-            // 
-            this.contraseñaDataGridViewTextBoxColumn.DataPropertyName = "Contraseña";
-            this.contraseñaDataGridViewTextBoxColumn.HeaderText = "Contraseña";
-            this.contraseñaDataGridViewTextBoxColumn.Name = "contraseñaDataGridViewTextBoxColumn";
-            this.contraseñaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cédulaDataGridViewTextBoxColumn
-            // 
-            this.cédulaDataGridViewTextBoxColumn.DataPropertyName = "Cédula";
-            this.cédulaDataGridViewTextBoxColumn.HeaderText = "Cédula";
-            this.cédulaDataGridViewTextBoxColumn.Name = "cédulaDataGridViewTextBoxColumn";
-            this.cédulaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dgvEstados.AllowUserToAddRows = false;
+            this.dgvEstados.AllowUserToDeleteRows = false;
+            this.dgvEstados.AutoGenerateColumns = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEstados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idEstadoLoginDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.descripciónDataGridViewTextBoxColumn});
+            this.dgvEstados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvEstados.DataSource = this.estadoLoginBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEstados.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvEstados.EnableHeadersVisualStyles = false;
+            this.dgvEstados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvEstados.Location = new System.Drawing.Point(0, 137);
+            this.dgvEstados.Name = "dgvEstados";
+            this.dgvEstados.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEstados.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvEstados.Size = new System.Drawing.Size(797, 332);
+            this.dgvEstados.TabIndex = 13;
             // 
             // idEstadoLoginDataGridViewTextBoxColumn
             // 
@@ -186,10 +156,24 @@
             this.idEstadoLoginDataGridViewTextBoxColumn.Name = "idEstadoLoginDataGridViewTextBoxColumn";
             this.idEstadoLoginDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // usuarioBindingSource1
+            // nombreDataGridViewTextBoxColumn
             // 
-            this.usuarioBindingSource1.DataMember = "Usuario";
-            this.usuarioBindingSource1.DataSource = this.sISTEMADataSet;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripciónDataGridViewTextBoxColumn
+            // 
+            this.descripciónDataGridViewTextBoxColumn.DataPropertyName = "Descripción";
+            this.descripciónDataGridViewTextBoxColumn.HeaderText = "Descripción";
+            this.descripciónDataGridViewTextBoxColumn.Name = "descripciónDataGridViewTextBoxColumn";
+            this.descripciónDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estadoLoginBindingSource
+            // 
+            this.estadoLoginBindingSource.DataMember = "EstadoLogin";
+            this.estadoLoginBindingSource.DataSource = this.sISTEMADataSet;
             // 
             // sISTEMADataSet
             // 
@@ -272,10 +256,9 @@
             this.labelX2.Font = new System.Drawing.Font("Lucida Sans", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.Location = new System.Drawing.Point(81, 14);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(221, 29);
+            this.labelX2.Size = new System.Drawing.Size(484, 29);
             this.labelX2.TabIndex = 7;
-            this.labelX2.Text = "Panel de Usuarios";
-            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.labelX2.Text = "Panel de Catágolo de los Estados";
             // 
             // line1
             // 
@@ -290,7 +273,6 @@
             // 
             this.bindingNavigatorEx1.AntiAlias = true;
             this.bindingNavigatorEx1.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigatorEx1.BindingSource = this.usuarioBindingSource1;
             this.bindingNavigatorEx1.CountLabel = this.bindingNavigatorCountItem;
             this.bindingNavigatorEx1.CountLabelFormat = "of {0}";
             this.bindingNavigatorEx1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -303,14 +285,14 @@
             this.bindingNavigatorCountItem,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem});
-            this.bindingNavigatorEx1.Location = new System.Drawing.Point(0, 431);
+            this.bindingNavigatorEx1.Location = new System.Drawing.Point(0, 468);
             this.bindingNavigatorEx1.MoveFirstButton = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorEx1.MoveLastButton = this.bindingNavigatorMoveLastItem;
             this.bindingNavigatorEx1.MoveNextButton = this.bindingNavigatorMoveNextItem;
             this.bindingNavigatorEx1.MovePreviousButton = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatorEx1.Name = "bindingNavigatorEx1";
             this.bindingNavigatorEx1.PositionTextBox = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorEx1.Size = new System.Drawing.Size(681, 25);
+            this.bindingNavigatorEx1.Size = new System.Drawing.Size(797, 25);
             this.bindingNavigatorEx1.Stretch = true;
             this.bindingNavigatorEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bindingNavigatorEx1.TabIndex = 15;
@@ -338,7 +320,7 @@
             this.bindingNavigatorPositionItem.ButtonCustom.Tooltip = "";
             this.bindingNavigatorPositionItem.ButtonCustom2.Tooltip = "";
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Text = "-1";
+            this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.bindingNavigatorPositionItem.TextBoxWidth = 54;
             this.bindingNavigatorPositionItem.WatermarkColor = System.Drawing.SystemColors.GrayText;
@@ -347,7 +329,6 @@
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.Click += new System.EventHandler(this.bindingNavigatorCountItem_Click);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -364,18 +345,17 @@
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // Usuarios
+            // CatEstadosLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.panelEx1);
-            this.Name = "Usuarios";
-            this.Size = new System.Drawing.Size(681, 456);
-            this.Load += new System.EventHandler(this.Usuarios_Load);
+            this.Name = "CatEstadosLogin";
+            this.Size = new System.Drawing.Size(797, 493);
+            this.Load += new System.EventHandler(this.CatEstadosLogin_Load);
             this.panelEx1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoLoginBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEx1)).EndInit();
@@ -385,22 +365,20 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.PanelEx panelEx1;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.Line line1;
-        private DevComponents.DotNetBar.ButtonX btnSalir;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvEstados;
         private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvUsuarios;
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contraseñaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cédulaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private DevComponents.DotNetBar.ButtonX btnSalir;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.Controls.Line line1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEstadoLoginDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource usuarioBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripciónDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource estadoLoginBindingSource;
         private Datos.Dataset.SISTEMADataSet sISTEMADataSet;
         private DevComponents.DotNetBar.Controls.BindingNavigatorEx bindingNavigatorEx1;
         private DevComponents.DotNetBar.LabelItem bindingNavigatorCountItem;
@@ -409,6 +387,5 @@
         private DevComponents.DotNetBar.TextBoxItem bindingNavigatorPositionItem;
         private DevComponents.DotNetBar.ButtonItem bindingNavigatorMoveNextItem;
         private DevComponents.DotNetBar.ButtonItem bindingNavigatorMoveLastItem;
-
     }
 }

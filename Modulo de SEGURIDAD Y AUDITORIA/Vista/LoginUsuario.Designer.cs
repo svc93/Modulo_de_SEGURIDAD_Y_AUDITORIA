@@ -36,8 +36,8 @@
             this.btnEntrar = new DevComponents.DotNetBar.ButtonX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.txtUsuario = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtContrasena = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtUsuario = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +67,7 @@
             this.progressCircleLogin.Location = new System.Drawing.Point(265, 171);
             this.progressCircleLogin.Name = "progressCircleLogin";
             this.progressCircleLogin.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Dot;
-            this.progressCircleLogin.ProgressColor = System.Drawing.Color.Transparent;
+            this.progressCircleLogin.ProgressColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.progressCircleLogin.ProgressTextColor = System.Drawing.Color.Transparent;
             this.progressCircleLogin.Size = new System.Drawing.Size(87, 66);
             this.progressCircleLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
@@ -144,36 +144,6 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 8;
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.SystemColors.Info;
-            // 
-            // 
-            // 
-            this.txtUsuario.Border.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUsuario.Border.BackColor2 = System.Drawing.SystemColors.InactiveBorder;
-            this.txtUsuario.Border.BackColorGradientType = DevComponents.DotNetBar.eGradientType.Radial;
-            this.txtUsuario.Border.BackgroundImagePosition = DevComponents.DotNetBar.eStyleBackgroundImage.Center;
-            this.txtUsuario.Border.BorderBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtUsuario.Border.BorderBottomWidth = 1;
-            this.txtUsuario.Border.BorderLeftWidth = 1;
-            this.txtUsuario.Border.BorderRightWidth = 1;
-            this.txtUsuario.Border.BorderTopWidth = 1;
-            this.txtUsuario.Border.Class = "TextBoxBorder";
-            this.txtUsuario.Border.CornerDiameter = 7;
-            this.txtUsuario.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.txtUsuario.ButtonCustom.Tooltip = "";
-            this.txtUsuario.ButtonCustom2.Tooltip = "";
-            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(183, 93);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PreventEnterBeep = true;
-            this.txtUsuario.Size = new System.Drawing.Size(256, 32);
-            this.txtUsuario.TabIndex = 8;
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUsuario.WatermarkText = "Usuario";
-            this.txtUsuario.TextChanged += new System.EventHandler(this.textBoxX1_TextChanged);
-            // 
             // txtContrasena
             // 
             this.txtContrasena.BackColor = System.Drawing.SystemColors.Info;
@@ -205,6 +175,36 @@
             this.txtContrasena.WatermarkImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtContrasena.WatermarkText = "Contraseña";
             this.txtContrasena.TextChanged += new System.EventHandler(this.textBoxX2_TextChanged);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.SystemColors.Info;
+            // 
+            // 
+            // 
+            this.txtUsuario.Border.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUsuario.Border.BackColor2 = System.Drawing.SystemColors.InactiveBorder;
+            this.txtUsuario.Border.BackColorGradientType = DevComponents.DotNetBar.eGradientType.Radial;
+            this.txtUsuario.Border.BackgroundImagePosition = DevComponents.DotNetBar.eStyleBackgroundImage.Center;
+            this.txtUsuario.Border.BorderBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtUsuario.Border.BorderBottomWidth = 1;
+            this.txtUsuario.Border.BorderLeftWidth = 1;
+            this.txtUsuario.Border.BorderRightWidth = 1;
+            this.txtUsuario.Border.BorderTopWidth = 1;
+            this.txtUsuario.Border.Class = "TextBoxBorder";
+            this.txtUsuario.Border.CornerDiameter = 7;
+            this.txtUsuario.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.txtUsuario.ButtonCustom.Tooltip = "";
+            this.txtUsuario.ButtonCustom2.Tooltip = "";
+            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(183, 93);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PreventEnterBeep = true;
+            this.txtUsuario.Size = new System.Drawing.Size(256, 32);
+            this.txtUsuario.TabIndex = 8;
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUsuario.WatermarkText = "Usuario";
+            this.txtUsuario.TextChanged += new System.EventHandler(this.textBoxX1_TextChanged);
             // 
             // LoginUsuario
             // 

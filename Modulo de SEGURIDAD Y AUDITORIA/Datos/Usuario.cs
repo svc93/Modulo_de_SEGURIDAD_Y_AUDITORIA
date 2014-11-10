@@ -31,6 +31,12 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos
             return dtUser;
         }
 
+        public Dataset.SISTEMADataSet.EstadoLoginDataTable tEstadosLogin() {
+            Dataset.SISTEMADataSetTableAdapters.EstadoLoginTableAdapter daUser = new Dataset.SISTEMADataSetTableAdapters.EstadoLoginTableAdapter();
+            Dataset.SISTEMADataSet.EstadoLoginDataTable dtUser = new Datos.Dataset.SISTEMADataSet.EstadoLoginDataTable();
+            daUser.Fill(dtUser);
+            return dtUser; 
+        }
 
 
     }

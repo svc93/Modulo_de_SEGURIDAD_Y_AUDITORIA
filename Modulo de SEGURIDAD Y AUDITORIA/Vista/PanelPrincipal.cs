@@ -16,7 +16,11 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
     public partial class PanelPrincipal : MetroAppForm
     {
         MetroComandos _Comandos = null;
+
         Usuarios formUsuarios = null;
+        CatAreas formCatAras = null;
+        CatEstadosLogin formCatEstadosLogin = null;
+
         LoginUsuario loginForm = null;
 
         Datos.Usuario ClassUser = new Datos.Usuario();
@@ -26,9 +30,8 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
         {
             InitializeComponent();
             _Comandos = new MetroComandos();
-
-            // Initialize Client related commands
-            _Comandos.UsuarioComandos.Nuevo = new Command(components); // We pass in components from Form so the command gets disposed automatically when form is disposed
+             
+            _Comandos.UsuarioComandos.Nuevo = new Command(components);
             _Comandos.UsuarioComandos.Nuevo.Executed += EjecutarUsuario;
 
             _Comandos.UsuarioComandos.Cancelar = new Command(components);
@@ -40,8 +43,28 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             _Comandos.LoginComandos.Login = new Command(components);
             _Comandos.LoginComandos.Login.Executed += VerificarLogin;
 
-        }
+            _Comandos.CatAreas.CerrarArea = new Command(components);
+            _Comandos.CatAreas.CerrarArea.Executed += CerrarCarAreas;
 
+            _Comandos.CatEstadosLogin.CerrarEstadosLogin = new Command(components);
+            _Comandos.CatEstadosLogin.CerrarEstadosLogin.Executed += CerrarCatEstadosLog;
+             
+        }
+         
+        private void CerrarCatEstadosLog(object sender, EventArgs e)
+        {
+            this.CloseModalPanel(formCatEstadosLogin, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+            formCatEstadosLogin.Commandos = null;
+            formCatEstadosLogin.Dispose();
+            formCatEstadosLogin = null;
+        } 
+        private void CerrarCarAreas(object sender, EventArgs e)
+        {
+            this.CloseModalPanel(formCatAras, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+            formCatAras.Commandos = null;
+            formCatAras.Dispose();
+            formCatAras = null;
+        } 
 
         void EjecutarUsuario(object sender, EventArgs e)
         {
@@ -51,12 +74,14 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             formUsuarios.Commandos = _Comandos;
             this.ShowModalPanel(formUsuarios, DevComponents.DotNetBar.Controls.eSlideSide.Left);
         }
+        
         private void CancelarUsuario(object sender, EventArgs e)
         {
             // Simply close client entry form "dialog"
             Debug.Assert(formUsuarios != null);
             CerrarUsuario();
         }
+        
         void VerificarLogin(object sender, EventArgs e)
         {
             if (loginForm.txtUsuario.Text == "" || loginForm.txtContrasena.Text == "")
@@ -81,8 +106,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 
             }
         }
-
-
+        
         private void CerrarUsuario()
         {
             _Comandos.UsuarioComandos.Nuevo.Enabled = true; // Enable new client command 
@@ -101,15 +125,20 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
         {
             
         }
-         
-         
-
+          
         private void InitializeComponent()
         { 
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelPrincipal));
-            this.metroTileItem2 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroCatAreas = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
+            this.Módulos = new DevComponents.DotNetBar.ItemContainer();
+            this.metroTileItem11 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem12 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem13 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem14 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem15 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem16 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.Seguridad = new DevComponents.DotNetBar.ItemContainer();
             this.btnMetroUsuarios = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem3 = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -118,24 +147,17 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.Auditoria = new DevComponents.DotNetBar.ItemContainer();
-            this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroCatEstLogin = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem7 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.metroShell1 = new DevComponents.DotNetBar.Metro.MetroShell();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.line1 = new DevComponents.DotNetBar.Controls.Line();
             this.timerLogin = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.Módulos = new DevComponents.DotNetBar.ItemContainer();
-            this.metroTileItem11 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem12 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem13 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem14 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem15 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem16 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -143,18 +165,19 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroTileItem2
+            // metroCatAreas
             // 
-            this.metroTileItem2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem2.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem2.Image")));
-            this.metroTileItem2.Name = "metroTileItem2";
-            this.metroTileItem2.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem2.Text = "Catálogo de Areas";
-            this.metroTileItem2.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            this.metroCatAreas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroCatAreas.Image = ((System.Drawing.Image)(resources.GetObject("metroCatAreas.Image")));
+            this.metroCatAreas.Name = "metroCatAreas";
+            this.metroCatAreas.SymbolColor = System.Drawing.Color.Empty;
+            this.metroCatAreas.Text = "Catálogo de Areas";
+            this.metroCatAreas.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
             // 
             // 
             // 
-            this.metroTileItem2.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroCatAreas.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroCatAreas.Click += new System.EventHandler(this.metroCatAreas_Click);
             // 
             // metroTilePanel1
             // 
@@ -178,6 +201,103 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTilePanel1.TabIndex = 0;
             this.metroTilePanel1.Text = "metroTilePanel1";
             // 
+            // Módulos
+            // 
+            // 
+            // 
+            // 
+            this.Módulos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Módulos.ItemSpacing = 7;
+            this.Módulos.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.Módulos.MultiLine = true;
+            this.Módulos.Name = "Módulos";
+            this.Módulos.ResizeItemsToFit = false;
+            this.Módulos.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem11,
+            this.metroTileItem12,
+            this.metroTileItem13,
+            this.metroTileItem14,
+            this.metroTileItem15,
+            this.metroTileItem16});
+            // 
+            // 
+            // 
+            this.Módulos.TitleStyle.Class = "MetroTileGroupTitle";
+            this.Módulos.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Módulos.TitleText = "Módulos";
+            // 
+            // metroTileItem11
+            // 
+            this.metroTileItem11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem11.Name = "metroTileItem11";
+            this.metroTileItem11.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem11.Text = "Nómina";
+            this.metroTileItem11.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive;
+            // 
+            // 
+            // 
+            this.metroTileItem11.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // metroTileItem12
+            // 
+            this.metroTileItem12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem12.Name = "metroTileItem12";
+            this.metroTileItem12.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem12.Text = "Evaluación al desempeño";
+            this.metroTileItem12.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
+            // 
+            // 
+            // 
+            this.metroTileItem12.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // metroTileItem13
+            // 
+            this.metroTileItem13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem13.Name = "metroTileItem13";
+            this.metroTileItem13.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem13.Text = "Acciones de RRHH";
+            this.metroTileItem13.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            // 
+            // 
+            // 
+            this.metroTileItem13.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // metroTileItem14
+            // 
+            this.metroTileItem14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem14.Name = "metroTileItem14";
+            this.metroTileItem14.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem14.Text = "Contratación y Expediente";
+            this.metroTileItem14.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum;
+            // 
+            // 
+            // 
+            this.metroTileItem14.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // metroTileItem15
+            // 
+            this.metroTileItem15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem15.Name = "metroTileItem15";
+            this.metroTileItem15.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem15.Text = "Selección";
+            this.metroTileItem15.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
+            // 
+            // 
+            // 
+            this.metroTileItem15.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // metroTileItem16
+            // 
+            this.metroTileItem16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem16.Name = "metroTileItem16";
+            this.metroTileItem16.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem16.Text = "Gestión de Capacitaciones";
+            this.metroTileItem16.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blue;
+            // 
+            // 
+            // 
+            this.metroTileItem16.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
             // Seguridad
             // 
             // 
@@ -190,7 +310,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.Seguridad.Name = "Seguridad";
             this.Seguridad.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMetroUsuarios,
-            this.metroTileItem2,
+            this.metroCatAreas,
             this.metroTileItem3,
             this.metroTileItem4,
             this.metroTileItem1,
@@ -288,7 +408,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.Auditoria.MultiLine = true;
             this.Auditoria.Name = "Auditoria";
             this.Auditoria.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem5,
+            this.metroCatEstLogin,
             this.metroTileItem6,
             this.metroTileItem7});
             // 
@@ -298,18 +418,19 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.Auditoria.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Auditoria.TitleText = "Auditoria";
             // 
-            // metroTileItem5
+            // metroCatEstLogin
             // 
-            this.metroTileItem5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem5.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem5.Image")));
-            this.metroTileItem5.Name = "metroTileItem5";
-            this.metroTileItem5.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem5.Text = "Catálogo de Estados de Login";
-            this.metroTileItem5.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive;
+            this.metroCatEstLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroCatEstLogin.Image = ((System.Drawing.Image)(resources.GetObject("metroCatEstLogin.Image")));
+            this.metroCatEstLogin.Name = "metroCatEstLogin";
+            this.metroCatEstLogin.SymbolColor = System.Drawing.Color.Empty;
+            this.metroCatEstLogin.Text = "Catálogo de Estados de Login";
+            this.metroCatEstLogin.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive;
             // 
             // 
             // 
-            this.metroTileItem5.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroCatEstLogin.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroCatEstLogin.Click += new System.EventHandler(this.metroCatEstLogin_Click);
             // 
             // metroTileItem6
             // 
@@ -417,6 +538,18 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.ForeColor = System.Drawing.Color.Black;
+            this.pictureBox1.Location = new System.Drawing.Point(777, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 59);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // line1
             // 
             this.line1.ForeColor = System.Drawing.Color.Black;
@@ -435,115 +568,6 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // Módulos
-            // 
-            // 
-            // 
-            // 
-            this.Módulos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Módulos.ItemSpacing = 7;
-            this.Módulos.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.Módulos.MultiLine = true;
-            this.Módulos.Name = "Módulos";
-            this.Módulos.ResizeItemsToFit = false;
-            this.Módulos.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem11,
-            this.metroTileItem12,
-            this.metroTileItem13,
-            this.metroTileItem14,
-            this.metroTileItem15,
-            this.metroTileItem16});
-            // 
-            // 
-            // 
-            this.Módulos.TitleStyle.Class = "MetroTileGroupTitle";
-            this.Módulos.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Módulos.TitleText = "Módulos";
-            // 
-            // metroTileItem11
-            // 
-            this.metroTileItem11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem11.Name = "metroTileItem11";
-            this.metroTileItem11.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem11.Text = "Nómina";
-            this.metroTileItem11.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive;
-            // 
-            // 
-            // 
-            this.metroTileItem11.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // metroTileItem12
-            // 
-            this.metroTileItem12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem12.Name = "metroTileItem12";
-            this.metroTileItem12.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem12.Text = "Evaluación al desempeño";
-            this.metroTileItem12.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Magenta;
-            // 
-            // 
-            // 
-            this.metroTileItem12.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // metroTileItem13
-            // 
-            this.metroTileItem13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem13.Name = "metroTileItem13";
-            this.metroTileItem13.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem13.Text = "Acciones de RRHH";
-            this.metroTileItem13.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
-            // 
-            // 
-            // 
-            this.metroTileItem13.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // metroTileItem14
-            // 
-            this.metroTileItem14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem14.Name = "metroTileItem14";
-            this.metroTileItem14.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem14.Text = "Contratación y Expediente";
-            this.metroTileItem14.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Plum;
-            // 
-            // 
-            // 
-            this.metroTileItem14.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // metroTileItem15
-            // 
-            this.metroTileItem15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem15.Name = "metroTileItem15";
-            this.metroTileItem15.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem15.Text = "Selección";
-            this.metroTileItem15.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
-            // 
-            // 
-            // 
-            this.metroTileItem15.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // metroTileItem16
-            // 
-            this.metroTileItem16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem16.Name = "metroTileItem16";
-            this.metroTileItem16.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem16.Text = "Gestión de Capacitaciones";
-            this.metroTileItem16.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blue;
-            // 
-            // 
-            // 
-            this.metroTileItem16.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.ForeColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(777, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 59);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // PanelPrincipal
             // 
@@ -618,5 +642,22 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
         {
 
         }
+
+        private void metroCatAreas_Click(object sender, EventArgs e)
+        {
+            Debug.Assert(formCatAras == null);
+            formCatAras = new CatAreas();
+            formCatAras.Commandos = _Comandos; 
+            this.ShowModalPanel(formCatAras, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+        }
+
+        private void metroCatEstLogin_Click(object sender, EventArgs e)
+        {
+            Debug.Assert(formCatEstadosLogin == null);
+            formCatEstadosLogin = new CatEstadosLogin();
+            formCatEstadosLogin.Commandos = _Comandos;
+            this.ShowModalPanel(formCatEstadosLogin, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+        }
+    
     }
 }

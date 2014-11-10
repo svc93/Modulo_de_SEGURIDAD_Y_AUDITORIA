@@ -12,6 +12,8 @@ namespace MetroBill
     {
         private DocumentCommands _UsuarioComandos = new DocumentCommands();
         private DocumentCommands _LoginComandos = new DocumentCommands();
+        private DocumentCommands _CatAreas = new DocumentCommands();
+        private DocumentCommands _CatEstadosLogin = new DocumentCommands();
         /// <summary>
         /// Gets the client related commands.
         /// </summary>
@@ -25,7 +27,16 @@ namespace MetroBill
             get { return _LoginComandos; }
             set { _LoginComandos = value; }
         }
-           
+        public DocumentCommands CatAreas
+        {
+            get { return _CatAreas; }
+            set { _CatAreas = value; }
+        }
+        public DocumentCommands CatEstadosLogin
+        {
+            get { return _CatEstadosLogin; }
+            set { _CatEstadosLogin = value; }
+        }
     }
 
     public class DocumentCommands
@@ -57,5 +68,19 @@ namespace MetroBill
             get { return _Login; }
             set { _Login = value; }
         }
+
+        private Command _CerrarArea;
+        public Command CerrarArea
+        {
+            get { return _CerrarArea; }
+            set { _CerrarArea = value; }
+        }
+        private Command _CerrarEstadosLogin;
+        public Command CerrarEstadosLogin
+        {
+            get { return _CerrarEstadosLogin; }
+            set { _CerrarEstadosLogin = value; }
+        }
+
     }
 }

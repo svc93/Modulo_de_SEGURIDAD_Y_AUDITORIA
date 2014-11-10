@@ -8,18 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroBill;
-using Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos; 
+using Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos;
 
 namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 {
-    public partial class Usuarios : UserControl
-    { 
-
-        public Usuarios()
+    public partial class CatAreas : UserControl
+    {
+        public CatAreas()
         {
             InitializeComponent();
         }
-
         private MetroComandos _Comandos;
         public MetroComandos Commandos
         {
@@ -39,30 +37,20 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
         {
             if (nuevoValor != null)
             {
-                btnSalir.Command = nuevoValor.UsuarioComandos.Cancelar; 
+                btnSalir.Command = nuevoValor.CatAreas.CerrarArea;
             }
             else
             {
-                btnSalir.Command = null; 
+                btnSalir.Command = null;
             }
         }
 
-        private void Usuarios_Load(object sender, EventArgs e)
+        private void CatAreas_Load(object sender, EventArgs e)
         {
-            Usuario datosUsuarios = new Usuario();
-            usuarioBindingSource1.DataSource = datosUsuarios.tUsuarios(); 
+            Areas datosAreas = new Areas();
+            catAreasBindingSource.DataSource = datosAreas.tCatAreas(); 
         }
 
-        private void panelEx1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void bindingNavigatorCountItem_Click(object sender, EventArgs e)
-        {
-
-        }
-         
-          
     }
 }
