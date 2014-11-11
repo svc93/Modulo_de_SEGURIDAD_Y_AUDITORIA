@@ -7,38 +7,25 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos
 {
     class Empleado
     {
-
-
-        Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos.Dataset.SISTEMADataSet.EmpleadosDataTable empleadosdt = new Dataset.SISTEMADataSet.EmpleadosDataTable();
-        Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos.Dataset.SISTEMADataSetTableAdapters.EmpleadosTableAdapter empleadosta = new Dataset.SISTEMADataSetTableAdapters.EmpleadosTableAdapter();
-
-
+        Dataset.SISTEMADataSet.EmpleadosDataTable empleadosdt = new Dataset.SISTEMADataSet.EmpleadosDataTable();
+        Dataset.SISTEMADataSetTableAdapters.EmpleadosTableAdapter empleadosta = new Dataset.SISTEMADataSetTableAdapters.EmpleadosTableAdapter();
+        
         BindingSource bs = new BindingSource();
-
-
+         
         public BindingSource cargar()
-        {
-
-
-            empleadosta.Fill(empleadosdt);
-
+        { 
+            empleadosta.Fill(empleadosdt); 
             bs.DataSource = empleadosdt;
-
-
             return bs;
-
-
         }
+         
 
         private Boolean busqueda(String user)
-        {
-
+        { 
             Boolean encontrado = false;
-
-
-
-            Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos.Dataset.SISTEMADataSet.EmpleadosDataTable empleadosdt = new Dataset.SISTEMADataSet.EmpleadosDataTable();
-            Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos.Dataset.SISTEMADataSetTableAdapters.EmpleadosTableAdapter empleadosta = new Dataset.SISTEMADataSetTableAdapters.EmpleadosTableAdapter();
+             
+            Datos.Dataset.SISTEMADataSet.EmpleadosDataTable empleadosdt = new Dataset.SISTEMADataSet.EmpleadosDataTable();
+            Datos.Dataset.SISTEMADataSetTableAdapters.EmpleadosTableAdapter empleadosta = new Dataset.SISTEMADataSetTableAdapters.EmpleadosTableAdapter();
 
             empleadosta.Fill(empleadosdt);
 
@@ -47,46 +34,40 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos
                 if (user == empleadosdt.Rows[i][0].ToString())
                 {
                     encontrado = true;
-
-
                 }
             }
-
             return encontrado;
-
-
-
-
         }
 
 
-        public void Insertar(string idempleado, string nombre, String apellidos, int edad, String sexo, Boolean estadocivil)
+        public void Insertar(string idempleado, string nombre, string apellidos, int edad, bool sexo, int estadocivil)
         { 
             if (busqueda(idempleado) == true)
             {
-                empleadosta.ActualizarEmpleado(nombre, apellidos, edad, estadocivil, sexo, idempleado);
+                empleadosta.ActualizarEmpleado(nombre, apellidos, edad, estadocivil, sexo, idempleado);             
                 MessageBox.Show("Se ha modificado el registro " + idempleado);
-
             }
             else
-            {
-
-                empleadosta.InsertarEmpleado(idempleado, nombre, apellidos, edad, sexo, estadocivil);
+            { 
+                empleadosta.InsertarEmpleado(idempleado, nombre, apellidos, edad, estadocivil, sexo);
                 MessageBox.Show("Se ha Agregado el nuevo registro " + idempleado);
-
             }
 
         }
 
         public void eliminar(string idempleado)
-        {
-
-            empleadosta.Delete(idempleado);
+        {            empleadosta.Delete(idempleado);
             empleadosta.Fill(empleadosdt);
             MessageBox.Show("Se ha eliminado el registro " + idempleado);
+        }
 
-        }        
 
-
+        public Dataset.SISTEMADataSet.Cat_Estado_CivilDataTable tEstadoCivil()
+        {
+            Dataset.SISTEMADataSetTableAdapters.Cat_Estado_CivilTableAdapter daUser = new Dataset.SISTEMADataSetTableAdapters.Cat_Estado_CivilTableAdapter();
+            Dataset.SISTEMADataSet.Cat_Estado_CivilDataTable dtUser = new Datos.Dataset.SISTEMADataSet.Cat_Estado_CivilDataTable();
+            daUser.Fill(dtUser);
+            return dtUser;
+        }
     }
 }

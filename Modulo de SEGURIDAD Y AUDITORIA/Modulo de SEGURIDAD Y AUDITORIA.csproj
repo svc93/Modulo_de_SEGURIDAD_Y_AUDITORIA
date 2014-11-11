@@ -59,6 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Areas.cs" />
+    <Compile Include="Datos\Dataset\SISTEMADataSet.cs">
+      <DependentUpon>SISTEMADataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Datos\Dataset\SISTEMADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

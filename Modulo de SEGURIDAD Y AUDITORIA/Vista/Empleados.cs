@@ -13,7 +13,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 {
     public partial class Empleados : UserControl
     {
-        Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos.Empleado Emp = new Datos.Empleados();
+        Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos.Empleado Emp = new Datos.Empleado();
 
         public Empleados()
         {
@@ -49,26 +49,19 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 
         private void buttonItem1_Click(object sender, EventArgs e)
         {
-            String estadoc;
-            String nuser;
-            String Sexo;
-            String Nombre;
-            String Apellidos;
-            String Edad;
+            string idEmpleado, nomEmpleado, apeEmpleado;
+            int estadoCivil,edadEmpleado;
+            bool sexoEmpleado;
 
+            idEmpleado = textBoxX8.Text;
+            int selectedValue = Int32.Parse((string)comboBoxEx2.SelectedValue); 
+            estadoCivil = selectedValue;
+            sexoEmpleado =  (comboBoxEx1.Text == "Masculino") ? true : false; 
+            nomEmpleado = textBoxX5.Text;
+            apeEmpleado = textBoxX7.Text; 
+            edadEmpleado = Int32.Parse(textBoxX4.Text);
 
-            nuser = textBoxX8.Text;
-            estadoc = comboBoxEx2.Text;
-            Sexo = comboBoxEx1.Text;
-
-            Nombre = textBoxX5.Text;
-            Apellidos = textBoxX7.Text;
-
-
-
-            Edad = textBoxX4.Text;
-
-            Emp.Insertar(nuser, Nombre, Apellidos, Edad, Sexo, estadoc);
+            Emp.Insertar(idEmpleado, nomEmpleado, apeEmpleado, edadEmpleado, sexoEmpleado, estadoCivil);
         }
 
         private void Empleados_Load(object sender, EventArgs e)
@@ -81,6 +74,16 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             comboBoxEx2.DataBindings.Add("Text", Emp.cargar(), "EstadoCIvil");
 
             bindingNavigatorEx1.BindingSource = Emp.cargar();
+            dgvEmpleados.DataSource = Emp.cargar();
+
+            DataTable estadosCivil = Emp.tEstadoCivil();
+            foreach (DataRow fila in estadosCivil.Rows) 
+            {
+                ComboboxItem item = new ComboboxItem();
+                item.Text = fila[1].ToString();
+                item.Value = fila[0].ToString();
+                comboBoxEx2.Items.Add(item);
+            }              
         }
 
         private MetroComandos _Comandos;
@@ -110,5 +113,37 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             }
         }
 
+        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
+
+    public class ComboboxItem
+    {
+        public string Text { get; set; }
+        public object Value { get; set; }
+
+        public override string ToString()
+        {
+            return Text;
+        }
+    }
+
 }

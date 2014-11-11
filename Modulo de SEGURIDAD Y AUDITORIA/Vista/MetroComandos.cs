@@ -14,6 +14,7 @@ namespace MetroBill
         private DocumentCommands _LoginComandos = new DocumentCommands();
         private DocumentCommands _CatAreas = new DocumentCommands();
         private DocumentCommands _CatEstadosLogin = new DocumentCommands();
+        private DocumentCommands _Empleados = new DocumentCommands();
         /// <summary>
         /// Gets the client related commands.
         /// </summary>
@@ -36,6 +37,11 @@ namespace MetroBill
         {
             get { return _CatEstadosLogin; }
             set { _CatEstadosLogin = value; }
+        }
+        public DocumentCommands Empleados
+        {
+            get { return _Empleados; }
+            set { _Empleados = value; }
         }
     }
 
@@ -80,6 +86,12 @@ namespace MetroBill
         {
             get { return _CerrarEstadosLogin; }
             set { _CerrarEstadosLogin = value; }
+        }
+        private Command _CerrarEmpleados;
+        public Command CerrarEmpleados
+        {
+            get { return _CerrarEmpleados; }
+            set { _CerrarEmpleados = value; }
         }
 
     }
