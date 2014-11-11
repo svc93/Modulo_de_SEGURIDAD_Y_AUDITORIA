@@ -36,3 +36,4 @@ C:\Users\willy\Desktop\SISTEMA SEGURIDAD Y AUDITORIA\Modulo_de_SEGURIDAD_Y_AUDIT
 C:\Users\willy\Desktop\SISTEMA SEGURIDAD Y AUDITORIA\Modulo_de_SEGURIDAD_Y_AUDITORIA\Modulo de SEGURIDAD Y AUDITORIA\obj\Debug\Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista.CatAreas.resources
 C:\Users\willy\Desktop\SISTEMA SEGURIDAD Y AUDITORIA\Modulo_de_SEGURIDAD_Y_AUDITORIA\Modulo de SEGURIDAD Y AUDITORIA\obj\Debug\Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista.CatEstadosLogin.resources
 C:\Users\willy\Desktop\SISTEMA SEGURIDAD Y AUDITORIA\Modulo_de_SEGURIDAD_Y_AUDITORIA\Modulo de SEGURIDAD Y AUDITORIA\obj\Debug\Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista.NuevoUsuario.resources
+C:\Users\willy\Desktop\SISTEMA SEGURIDAD Y AUDITORIA\Modulo_de_SEGURIDAD_Y_AUDITORIA\Modulo de SEGURIDAD Y AUDITORIA\obj\Debug\Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista.Empleados.resources

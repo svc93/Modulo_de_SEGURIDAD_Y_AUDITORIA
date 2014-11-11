@@ -48,17 +48,26 @@
             this.btnSalir = new DevComponents.DotNetBar.ButtonX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.bindingNavigatorEx1 = new DevComponents.DotNetBar.Controls.BindingNavigatorEx(this.components);
+            this.bindingNavigatorMoveFirstItem = new DevComponents.DotNetBar.ButtonItem();
+            this.bindingNavigatorMovePreviousItem = new DevComponents.DotNetBar.ButtonItem();
+            this.bindingNavigatorPositionItem = new DevComponents.DotNetBar.TextBoxItem();
+            this.bindingNavigatorCountItem = new DevComponents.DotNetBar.LabelItem();
+            this.bindingNavigatorMoveNextItem = new DevComponents.DotNetBar.ButtonItem();
+            this.bindingNavigatorMoveLastItem = new DevComponents.DotNetBar.ButtonItem();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAreas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catAreasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEx1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEx1
             // 
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx1.Controls.Add(this.bindingNavigatorEx1);
             this.panelEx1.Controls.Add(this.labelX1);
             this.panelEx1.Controls.Add(this.dgvAreas);
             this.panelEx1.Controls.Add(this.buttonX3);
@@ -124,7 +133,6 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAreas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAreas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvAreas.EnableHeadersVisualStyles = false;
             this.dgvAreas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvAreas.Location = new System.Drawing.Point(0, 137);
@@ -138,7 +146,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAreas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAreas.Size = new System.Drawing.Size(812, 335);
+            this.dgvAreas.Size = new System.Drawing.Size(812, 308);
             this.dgvAreas.TabIndex = 13;
             // 
             // idAreaDataGridViewTextBoxColumn
@@ -262,6 +270,83 @@
             this.line1.TabIndex = 5;
             this.line1.Text = "line1";
             // 
+            // bindingNavigatorEx1
+            // 
+            this.bindingNavigatorEx1.AntiAlias = true;
+            this.bindingNavigatorEx1.BackColor = System.Drawing.Color.Transparent;
+            this.bindingNavigatorEx1.BindingSource = this.catAreasBindingSource;
+            this.bindingNavigatorEx1.CountLabel = this.bindingNavigatorCountItem;
+            this.bindingNavigatorEx1.CountLabelFormat = "of {0}";
+            this.bindingNavigatorEx1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigatorEx1.DockSide = DevComponents.DotNetBar.eDockSide.Document;
+            this.bindingNavigatorEx1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorEx1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem});
+            this.bindingNavigatorEx1.Location = new System.Drawing.Point(0, 447);
+            this.bindingNavigatorEx1.MoveFirstButton = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigatorEx1.MoveLastButton = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigatorEx1.MoveNextButton = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigatorEx1.MovePreviousButton = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigatorEx1.Name = "bindingNavigatorEx1";
+            this.bindingNavigatorEx1.PositionTextBox = this.bindingNavigatorPositionItem;
+            this.bindingNavigatorEx1.Size = new System.Drawing.Size(812, 25);
+            this.bindingNavigatorEx1.Stretch = true;
+            this.bindingNavigatorEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bindingNavigatorEx1.TabIndex = 15;
+            this.bindingNavigatorEx1.TabStop = false;
+            this.bindingNavigatorEx1.Text = "bindingNavigatorEx1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.BeginGroup = true;
+            this.bindingNavigatorPositionItem.ButtonCustom.Tooltip = "";
+            this.bindingNavigatorPositionItem.ButtonCustom2.Tooltip = "";
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Text = "-1";
+            this.bindingNavigatorPositionItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bindingNavigatorPositionItem.TextBoxWidth = 54;
+            this.bindingNavigatorPositionItem.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.BeginGroup = true;
+            this.bindingNavigatorMoveNextItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
             // CatAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +360,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.catAreasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEx1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,5 +382,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripciónDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource catAreasBindingSource;
         private Datos.Dataset.SISTEMADataSet sISTEMADataSet;
+        private DevComponents.DotNetBar.Controls.BindingNavigatorEx bindingNavigatorEx1;
+        private DevComponents.DotNetBar.LabelItem bindingNavigatorCountItem;
+        private DevComponents.DotNetBar.ButtonItem bindingNavigatorMoveFirstItem;
+        private DevComponents.DotNetBar.ButtonItem bindingNavigatorMovePreviousItem;
+        private DevComponents.DotNetBar.TextBoxItem bindingNavigatorPositionItem;
+        private DevComponents.DotNetBar.ButtonItem bindingNavigatorMoveNextItem;
+        private DevComponents.DotNetBar.ButtonItem bindingNavigatorMoveLastItem;
     }
 }

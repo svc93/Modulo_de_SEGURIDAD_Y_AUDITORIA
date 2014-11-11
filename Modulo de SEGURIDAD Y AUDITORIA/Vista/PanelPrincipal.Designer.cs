@@ -21,7 +21,7 @@
         private System.Windows.Forms.Timer timer2;
         private DevComponents.DotNetBar.Controls.Line line1;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem1;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem9;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroEmpleados;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem10;
         private DevComponents.DotNetBar.ItemContainer Módulos;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem11;

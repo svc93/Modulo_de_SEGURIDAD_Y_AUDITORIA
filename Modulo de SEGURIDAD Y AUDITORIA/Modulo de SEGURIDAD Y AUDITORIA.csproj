@@ -64,6 +64,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SISTEMADataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datos\Empleado.cs" />
     <Compile Include="Datos\Usuario.cs" />
     <Compile Include="Vista\CatAreas.cs">
       <SubType>UserControl</SubType>
@@ -76,6 +77,12 @@
     </Compile>
     <Compile Include="Vista\CatEstadosLogin.Designer.cs">
       <DependentUpon>CatEstadosLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Empleados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\LoginUsuario.cs">
       <SubType>UserControl</SubType>
@@ -118,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\CatEstadosLogin.resx">
       <DependentUpon>CatEstadosLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\LoginUsuario.resx">
       <DependentUpon>LoginUsuario.cs</DependentUpon>

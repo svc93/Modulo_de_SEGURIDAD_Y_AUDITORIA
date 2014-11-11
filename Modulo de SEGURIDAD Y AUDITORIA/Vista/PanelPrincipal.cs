@@ -19,6 +19,8 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 
         Usuarios formUsuarios = null;
         CatAreas formCatAras = null;
+        Empleados formEmpleados = null;
+
         CatEstadosLogin formCatEstadosLogin = null;
 
         LoginUsuario loginForm = null;
@@ -48,9 +50,20 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 
             _Comandos.CatEstadosLogin.CerrarEstadosLogin = new Command(components);
             _Comandos.CatEstadosLogin.CerrarEstadosLogin.Executed += CerrarCatEstadosLog;
+
+            _Comandos.Empleados.CerrarEmpleados = new Command(components);
+            _Comandos.Empleados.CerrarEmpleados.Executed += CerrarEmpleados;
              
         }
-         
+
+        private void CerrarEmpleados(object sender, EventArgs e)
+        {
+            this.CloseModalPanel(formEmpleados, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+            formEmpleados.Commandos = null;
+            formEmpleados.Dispose();
+            formEmpleados = null;
+        }
+
         private void CerrarCatEstadosLog(object sender, EventArgs e)
         {
             this.CloseModalPanel(formCatEstadosLogin, DevComponents.DotNetBar.Controls.eSlideSide.Left);
@@ -58,6 +71,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             formCatEstadosLogin.Dispose();
             formCatEstadosLogin = null;
         } 
+        
         private void CerrarCarAreas(object sender, EventArgs e)
         {
             this.CloseModalPanel(formCatAras, DevComponents.DotNetBar.Controls.eSlideSide.Left);
@@ -144,7 +158,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTileItem3 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem4 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroEmpleados = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.Auditoria = new DevComponents.DotNetBar.ItemContainer();
             this.metroCatEstLogin = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -229,6 +243,8 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // metroTileItem11
             // 
             this.metroTileItem11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem11.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem11.Image")));
+            this.metroTileItem11.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroTileItem11.Name = "metroTileItem11";
             this.metroTileItem11.SymbolColor = System.Drawing.Color.Empty;
             this.metroTileItem11.Text = "Nómina";
@@ -241,6 +257,8 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // metroTileItem12
             // 
             this.metroTileItem12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem12.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem12.Image")));
+            this.metroTileItem12.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroTileItem12.Name = "metroTileItem12";
             this.metroTileItem12.SymbolColor = System.Drawing.Color.Empty;
             this.metroTileItem12.Text = "Evaluación al desempeño";
@@ -277,6 +295,8 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // metroTileItem15
             // 
             this.metroTileItem15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem15.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem15.Image")));
+            this.metroTileItem15.ImageTextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroTileItem15.Name = "metroTileItem15";
             this.metroTileItem15.SymbolColor = System.Drawing.Color.Empty;
             this.metroTileItem15.Text = "Selección";
@@ -289,6 +309,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // metroTileItem16
             // 
             this.metroTileItem16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem16.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem16.Image")));
             this.metroTileItem16.Name = "metroTileItem16";
             this.metroTileItem16.SymbolColor = System.Drawing.Color.Empty;
             this.metroTileItem16.Text = "Gestión de Capacitaciones";
@@ -314,7 +335,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTileItem3,
             this.metroTileItem4,
             this.metroTileItem1,
-            this.metroTileItem9,
+            this.metroEmpleados,
             this.metroTileItem10});
             this.Seguridad.Text = "Seguridad";
             // 
@@ -374,25 +395,28 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             this.metroTileItem1.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // metroTileItem9
+            // metroEmpleados
             // 
-            this.metroTileItem9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem9.Name = "metroTileItem9";
-            this.metroTileItem9.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem9.Text = "Empleados";
-            this.metroTileItem9.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("metroEmpleados.Image")));
+            this.metroEmpleados.Name = "metroEmpleados";
+            this.metroEmpleados.SymbolColor = System.Drawing.Color.Empty;
+            this.metroEmpleados.Text = "Empleados";
+            this.metroEmpleados.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             // 
             // 
             // 
-            this.metroTileItem9.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroEmpleados.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroEmpleados.Click += new System.EventHandler(this.metroEmpleados_Click);
             // 
             // metroTileItem10
             // 
             this.metroTileItem10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem10.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem10.Image")));
             this.metroTileItem10.Name = "metroTileItem10";
             this.metroTileItem10.SymbolColor = System.Drawing.Color.Empty;
             this.metroTileItem10.Text = "Respaldos";
-            this.metroTileItem10.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Coffee;
+            this.metroTileItem10.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Olive;
             // 
             // 
             // 
@@ -461,7 +485,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             // metroShell1
             // 
-            this.metroShell1.BackColor = System.Drawing.Color.White;
+            this.metroShell1.BackColor = System.Drawing.Color.DimGray;
             // 
             // 
             // 
@@ -530,7 +554,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.splitContainer1.Panel2.Controls.Add(this.metroTilePanel1);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.Black;
             this.splitContainer1.Size = new System.Drawing.Size(877, 534);
@@ -571,7 +595,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             // PanelPrincipal
             // 
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(879, 569);
             this.Controls.Add(this.metroShell1);
             this.Controls.Add(this.splitContainer1);
@@ -657,6 +681,15 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             formCatEstadosLogin = new CatEstadosLogin();
             formCatEstadosLogin.Commandos = _Comandos;
             this.ShowModalPanel(formCatEstadosLogin, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+        }
+
+        private void metroEmpleados_Click(object sender, EventArgs e)
+        {
+            Debug.Assert(formEmpleados == null);
+            formEmpleados = new Empleados();
+            formEmpleados.Commandos = _Comandos;
+            this.ShowModalPanel(formEmpleados, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+       
         }
     
     }
