@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos
 {
-    class D_Seg_Areas
+    class D_Seg_EstadoLogin
     {
         SISTEMADataSet.Cat_AreasDataTable areaT = new SISTEMADataSet.Cat_AreasDataTable();
         Cat_AreasTableAdapter areaTa = new Cat_AreasTableAdapter();

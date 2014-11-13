@@ -69,6 +69,7 @@
       <DependentUpon>SISTEMADataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Datos_Seg\D_Seg_Empleado.cs" />
+    <Compile Include="Datos_Seg\D_Seg_EstadosLogin.cs" />
     <Compile Include="Datos_Seg\D_Seg_Usuario.cs" />
     <Compile Include="Vista_Seg\segFormCatAreas.cs">
       <SubType>UserControl</SubType>

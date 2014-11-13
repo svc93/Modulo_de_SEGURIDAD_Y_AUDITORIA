@@ -32,8 +32,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
           
         private void Empleados_Load(object sender, EventArgs e)
         {
-            cargarDatosNuevo();
-             
+            cargarDatosNuevo(); 
         }
       
         private void cargarDatosNuevo()

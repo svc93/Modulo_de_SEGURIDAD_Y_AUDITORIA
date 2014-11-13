@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.btnSalir = new DevComponents.DotNetBar.ButtonX();
             this.bindingNavigatorEx1 = new DevComponents.DotNetBar.Controls.BindingNavigatorEx(this.components);
             this.bindingNavigatorCountItem = new DevComponents.DotNetBar.LabelItem();
             this.bindingNavigatorMoveFirstItem = new DevComponents.DotNetBar.ButtonItem();
@@ -48,23 +49,29 @@
             this.btnEliminar = new DevComponents.DotNetBar.ButtonItem();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.dgvUsuarios = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.txtContra = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.txtUsuario = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbCedula = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cmbEstado = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMADataSet = new Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos_Seg.Dataset.SISTEMADataSet();
             this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cédulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idEstadoLoginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMADataSet = new Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos_Seg.Dataset.SISTEMADataSet();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.btnSalir = new DevComponents.DotNetBar.ButtonX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMADataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -76,7 +83,14 @@
             // 
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx1.Controls.Add(this.labelX3);
+            this.panelEx1.Controls.Add(this.cmbEstado);
+            this.panelEx1.Controls.Add(this.cmbCedula);
+            this.panelEx1.Controls.Add(this.label1);
+            this.panelEx1.Controls.Add(this.label7);
+            this.panelEx1.Controls.Add(this.txtContra);
+            this.panelEx1.Controls.Add(this.txtUsuario);
+            this.panelEx1.Controls.Add(this.label3);
+            this.panelEx1.Controls.Add(this.label2);
             this.panelEx1.Controls.Add(this.btnSalir);
             this.panelEx1.Controls.Add(this.bindingNavigatorEx1);
             this.panelEx1.Controls.Add(this.labelX1);
@@ -98,7 +112,20 @@
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 9;
-            this.panelEx1.Click += new System.EventHandler(this.panelEx1_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.HoverImage")));
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(555, 14);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(112, 53);
+            this.btnSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSalir.TabIndex = 142;
             // 
             // bindingNavigatorEx1
             // 
@@ -188,6 +215,7 @@
             this.btnNuevo.HotForeColor = System.Drawing.Color.Black;
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
@@ -197,6 +225,7 @@
             this.btnGuardar.HotForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnLimpiar
             // 
@@ -206,6 +235,7 @@
             this.btnLimpiar.HotForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -223,7 +253,7 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(3, 177);
+            this.labelX1.Location = new System.Drawing.Point(3, 161);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(155, 23);
             this.labelX1.TabIndex = 14;
@@ -255,12 +285,12 @@
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
             this.dgvUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dgvUsuarios.Location = new System.Drawing.Point(0, 206);
+            this.dgvUsuarios.Location = new System.Drawing.Point(0, 186);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -271,46 +301,8 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvUsuarios.Size = new System.Drawing.Size(681, 225);
+            this.dgvUsuarios.Size = new System.Drawing.Size(681, 245);
             this.dgvUsuarios.TabIndex = 13;
-            // 
-            // idUsuarioDataGridViewTextBoxColumn
-            // 
-            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
-            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contraseñaDataGridViewTextBoxColumn
-            // 
-            this.contraseñaDataGridViewTextBoxColumn.DataPropertyName = "Contraseña";
-            this.contraseñaDataGridViewTextBoxColumn.HeaderText = "Contraseña";
-            this.contraseñaDataGridViewTextBoxColumn.Name = "contraseñaDataGridViewTextBoxColumn";
-            this.contraseñaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cédulaDataGridViewTextBoxColumn
-            // 
-            this.cédulaDataGridViewTextBoxColumn.DataPropertyName = "Cédula";
-            this.cédulaDataGridViewTextBoxColumn.HeaderText = "Cédula";
-            this.cédulaDataGridViewTextBoxColumn.Name = "cédulaDataGridViewTextBoxColumn";
-            this.cédulaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idEstadoLoginDataGridViewTextBoxColumn
-            // 
-            this.idEstadoLoginDataGridViewTextBoxColumn.DataPropertyName = "IdEstadoLogin";
-            this.idEstadoLoginDataGridViewTextBoxColumn.HeaderText = "IdEstadoLogin";
-            this.idEstadoLoginDataGridViewTextBoxColumn.Name = "idEstadoLoginDataGridViewTextBoxColumn";
-            this.idEstadoLoginDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usuarioBindingSource1
-            // 
-            this.usuarioBindingSource1.DataMember = "Usuario";
-            this.usuarioBindingSource1.DataSource = this.sISTEMADataSet;
-            // 
-            // sISTEMADataSet
-            // 
-            this.sISTEMADataSet.DataSetName = "SISTEMADataSet";
-            this.sISTEMADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox1
             // 
@@ -346,34 +338,159 @@
             this.line1.TabIndex = 5;
             this.line1.Text = "line1";
             // 
-            // btnSalir
-            // 
-            this.btnSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.HoverImage")));
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(555, 14);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 53);
-            this.btnSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSalir.TabIndex = 142;
-            // 
-            // labelX3
+            // txtContra
             // 
             // 
             // 
             // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(5, 88);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(662, 69);
-            this.labelX3.TabIndex = 143;
-            this.labelX3.Text = "PONER LOS TXT PARA USUARIO, CONTRASEÑA, CONFIRMAR CONTRA, COMBOBOX DE CEDULA DE L" +
-    "OS EMPLEADOS ";
+            this.txtContra.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtContra.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtContra.ButtonClear.Tooltip = "";
+            this.txtContra.ButtonClear.Visible = true;
+            this.txtContra.ButtonCustom.Tooltip = "";
+            this.txtContra.ButtonCustom2.Tooltip = "";
+            this.txtContra.ButtonDropDown.Tooltip = "";
+            this.txtContra.Font = new System.Drawing.Font("Lucida Sans", 14.25F);
+            this.txtContra.Location = new System.Drawing.Point(143, 121);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.Size = new System.Drawing.Size(219, 30);
+            this.txtContra.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtContra.TabIndex = 146;
+            this.txtContra.Text = "";
+            this.txtContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContra.WatermarkText = "Contraseña...";
+            // 
+            // txtUsuario
+            // 
+            // 
+            // 
+            // 
+            this.txtUsuario.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtUsuario.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtUsuario.ButtonClear.Tooltip = "";
+            this.txtUsuario.ButtonClear.Visible = true;
+            this.txtUsuario.ButtonCustom.Tooltip = "";
+            this.txtUsuario.ButtonCustom2.Tooltip = "";
+            this.txtUsuario.ButtonDropDown.Tooltip = "";
+            this.txtUsuario.Font = new System.Drawing.Font("Lucida Sans", 14.25F);
+            this.txtUsuario.Location = new System.Drawing.Point(143, 78);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(219, 30);
+            this.txtUsuario.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtUsuario.TabIndex = 145;
+            this.txtUsuario.Text = "";
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUsuario.WatermarkText = "Usuario...";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(11, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 23);
+            this.label3.TabIndex = 144;
+            this.label3.Text = "Contraseña:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(11, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 23);
+            this.label2.TabIndex = 143;
+            this.label2.Text = "Usuario:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(374, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 23);
+            this.label7.TabIndex = 147;
+            this.label7.Text = "Cédula:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(374, 123);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 23);
+            this.label1.TabIndex = 149;
+            this.label1.Text = "Estado:";
+            // 
+            // cmbCedula
+            // 
+            this.cmbCedula.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbCedula.DisplayMember = "Text";
+            this.cmbCedula.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbCedula.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCedula.FormattingEnabled = true;
+            this.cmbCedula.ItemHeight = 24;
+            this.cmbCedula.Location = new System.Drawing.Point(454, 80);
+            this.cmbCedula.Name = "cmbCedula";
+            this.cmbCedula.Size = new System.Drawing.Size(213, 30);
+            this.cmbCedula.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbCedula.TabIndex = 151;
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbEstado.DisplayMember = "Text";
+            this.cmbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbEstado.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.ItemHeight = 24;
+            this.cmbEstado.Location = new System.Drawing.Point(454, 121);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(213, 30);
+            this.cmbEstado.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbEstado.TabIndex = 152;
+            // 
+            // usuarioBindingSource1
+            // 
+            this.usuarioBindingSource1.DataMember = "Usuario";
+            this.usuarioBindingSource1.DataSource = this.sISTEMADataSet;
+            // 
+            // sISTEMADataSet
+            // 
+            this.sISTEMADataSet.DataSetName = "SISTEMADataSet";
+            this.sISTEMADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // idUsuarioDataGridViewTextBoxColumn
+            // 
+            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
+            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // contraseñaDataGridViewTextBoxColumn
+            // 
+            this.contraseñaDataGridViewTextBoxColumn.DataPropertyName = "Contraseña";
+            this.contraseñaDataGridViewTextBoxColumn.HeaderText = "Contraseña";
+            this.contraseñaDataGridViewTextBoxColumn.Name = "contraseñaDataGridViewTextBoxColumn";
+            this.contraseñaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cédulaDataGridViewTextBoxColumn
+            // 
+            this.cédulaDataGridViewTextBoxColumn.DataPropertyName = "Cédula";
+            this.cédulaDataGridViewTextBoxColumn.HeaderText = "Cédula";
+            this.cédulaDataGridViewTextBoxColumn.Name = "cédulaDataGridViewTextBoxColumn";
+            this.cédulaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idEstadoLoginDataGridViewTextBoxColumn
+            // 
+            this.idEstadoLoginDataGridViewTextBoxColumn.DataPropertyName = "IdEstadoLogin";
+            this.idEstadoLoginDataGridViewTextBoxColumn.HeaderText = "IdEstadoLogin";
+            this.idEstadoLoginDataGridViewTextBoxColumn.Name = "idEstadoLoginDataGridViewTextBoxColumn";
+            this.idEstadoLoginDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Usuarios
             // 
@@ -385,11 +502,12 @@
             this.Size = new System.Drawing.Size(681, 456);
             this.Load += new System.EventHandler(this.Usuarios_Load);
             this.panelEx1.ResumeLayout(false);
+            this.panelEx1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMADataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,7 +539,14 @@
         private DevComponents.DotNetBar.ButtonItem btnLimpiar;
         private DevComponents.DotNetBar.ButtonItem btnEliminar;
         private DevComponents.DotNetBar.ButtonX btnSalir;
-        private DevComponents.DotNetBar.LabelX labelX3;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtContra;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtUsuario;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbEstado;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbCedula;
 
     }
 }

@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatAreas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.dgvAreas = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.btnSalir = new DevComponents.DotNetBar.ButtonX();
+            this.txtDescripcion = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.txtNombre = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.txtIdArea = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.bindingNavigatorEx1 = new DevComponents.DotNetBar.Controls.BindingNavigatorEx(this.components);
+            this.catAreasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMADataSet = new Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos_Seg.Dataset.SISTEMADataSet();
             this.bindingNavigatorCountItem = new DevComponents.DotNetBar.LabelItem();
             this.bindingNavigatorMoveFirstItem = new DevComponents.DotNetBar.ButtonItem();
             this.bindingNavigatorMovePreviousItem = new DevComponents.DotNetBar.ButtonItem();
@@ -51,23 +53,21 @@
             this.btnGuardar = new DevComponents.DotNetBar.ButtonItem();
             this.btnLimpiar = new DevComponents.DotNetBar.ButtonItem();
             this.btnEliminar = new DevComponents.DotNetBar.ButtonItem();
-            this.txtDescripcion = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
-            this.txtNombre = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
-            this.txtIdArea = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.catAreasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMADataSet = new Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos_Seg.Dataset.SISTEMADataSet();
+            this.btnSalir = new DevComponents.DotNetBar.ButtonX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.dgvAreas = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.idAreaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripciónDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
             this.panelEx1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAreas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catAreasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAreas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelEx1
@@ -101,230 +101,6 @@
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 10;
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(5, 191);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(155, 23);
-            this.labelX1.TabIndex = 14;
-            this.labelX1.Text = "Todas las áreas:";
-            // 
-            // dgvAreas
-            // 
-            this.dgvAreas.AllowUserToAddRows = false;
-            this.dgvAreas.AllowUserToDeleteRows = false;
-            this.dgvAreas.AutoGenerateColumns = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAreas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvAreas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAreas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idAreaDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.descripciónDataGridViewTextBoxColumn});
-            this.dgvAreas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvAreas.DataSource = this.catAreasBindingSource;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAreas.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvAreas.EnableHeadersVisualStyles = false;
-            this.dgvAreas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dgvAreas.Location = new System.Drawing.Point(0, 220);
-            this.dgvAreas.Name = "dgvAreas";
-            this.dgvAreas.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAreas.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvAreas.Size = new System.Drawing.Size(690, 225);
-            this.dgvAreas.TabIndex = 13;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 48);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Lucida Sans", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(81, 14);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(378, 29);
-            this.labelX2.TabIndex = 7;
-            this.labelX2.Text = "Panel de Catágolo de Áreas";
-            // 
-            // line1
-            // 
-            this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.Location = new System.Drawing.Point(5, 60);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(673, 25);
-            this.line1.TabIndex = 5;
-            this.line1.Text = "line1";
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.HoverImage")));
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(566, 14);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(112, 53);
-            this.btnSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSalir.TabIndex = 16;
-            // 
-            // bindingNavigatorEx1
-            // 
-            this.bindingNavigatorEx1.AntiAlias = true;
-            this.bindingNavigatorEx1.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigatorEx1.BindingSource = this.catAreasBindingSource;
-            this.bindingNavigatorEx1.CountLabel = this.bindingNavigatorCountItem;
-            this.bindingNavigatorEx1.CountLabelFormat = "of {0}";
-            this.bindingNavigatorEx1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigatorEx1.DockSide = DevComponents.DotNetBar.eDockSide.Document;
-            this.bindingNavigatorEx1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorEx1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.btnNuevo,
-            this.btnGuardar,
-            this.btnLimpiar,
-            this.btnEliminar});
-            this.bindingNavigatorEx1.Location = new System.Drawing.Point(0, 447);
-            this.bindingNavigatorEx1.MoveFirstButton = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigatorEx1.MoveLastButton = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigatorEx1.MoveNextButton = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigatorEx1.MovePreviousButton = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigatorEx1.Name = "bindingNavigatorEx1";
-            this.bindingNavigatorEx1.PositionTextBox = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorEx1.Size = new System.Drawing.Size(693, 25);
-            this.bindingNavigatorEx1.Stretch = true;
-            this.bindingNavigatorEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bindingNavigatorEx1.TabIndex = 141;
-            this.bindingNavigatorEx1.TabStop = false;
-            this.bindingNavigatorEx1.Text = "bindingNavigatorEx1";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.BeginGroup = true;
-            this.bindingNavigatorPositionItem.ButtonCustom.Tooltip = "";
-            this.bindingNavigatorPositionItem.ButtonCustom2.Tooltip = "";
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Text = "-1";
-            this.bindingNavigatorPositionItem.TextBoxWidth = 54;
-            this.bindingNavigatorPositionItem.WatermarkColor = System.Drawing.SystemColors.GrayText;
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.BeginGroup = true;
-            this.bindingNavigatorMoveNextItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.HotFontBold = true;
-            this.btnNuevo.HotFontUnderline = true;
-            this.btnNuevo.HotForeColor = System.Drawing.Color.Black;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.HotFontBold = true;
-            this.btnGuardar.HotFontUnderline = true;
-            this.btnGuardar.HotForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiar.HotFontBold = true;
-            this.btnLimpiar.HotFontUnderline = true;
-            this.btnLimpiar.HotForeColor = System.Drawing.Color.Black;
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.HotFontBold = true;
-            this.btnEliminar.HotFontUnderline = true;
-            this.btnEliminar.HotForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtDescripcion
             // 
@@ -425,6 +201,41 @@
             this.label2.TabIndex = 144;
             this.label2.Text = "Id Area:";
             // 
+            // bindingNavigatorEx1
+            // 
+            this.bindingNavigatorEx1.AntiAlias = true;
+            this.bindingNavigatorEx1.BackColor = System.Drawing.Color.Transparent;
+            this.bindingNavigatorEx1.BindingSource = this.catAreasBindingSource;
+            this.bindingNavigatorEx1.CountLabel = this.bindingNavigatorCountItem;
+            this.bindingNavigatorEx1.CountLabelFormat = "of {0}";
+            this.bindingNavigatorEx1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigatorEx1.DockSide = DevComponents.DotNetBar.eDockSide.Document;
+            this.bindingNavigatorEx1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorEx1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.btnNuevo,
+            this.btnGuardar,
+            this.btnLimpiar,
+            this.btnEliminar});
+            this.bindingNavigatorEx1.Location = new System.Drawing.Point(0, 447);
+            this.bindingNavigatorEx1.MoveFirstButton = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigatorEx1.MoveLastButton = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigatorEx1.MoveNextButton = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigatorEx1.MovePreviousButton = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigatorEx1.Name = "bindingNavigatorEx1";
+            this.bindingNavigatorEx1.PositionTextBox = this.bindingNavigatorPositionItem;
+            this.bindingNavigatorEx1.Size = new System.Drawing.Size(693, 25);
+            this.bindingNavigatorEx1.Stretch = true;
+            this.bindingNavigatorEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bindingNavigatorEx1.TabIndex = 141;
+            this.bindingNavigatorEx1.TabStop = false;
+            this.bindingNavigatorEx1.Text = "bindingNavigatorEx1";
+            // 
             // catAreasBindingSource
             // 
             this.catAreasBindingSource.DataMember = "Cat_Areas";
@@ -434,6 +245,162 @@
             // 
             this.sISTEMADataSet.DataSetName = "SISTEMADataSet";
             this.sISTEMADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.BeginGroup = true;
+            this.bindingNavigatorPositionItem.ButtonCustom.Tooltip = "";
+            this.bindingNavigatorPositionItem.ButtonCustom2.Tooltip = "";
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Text = "-1";
+            this.bindingNavigatorPositionItem.TextBoxWidth = 54;
+            this.bindingNavigatorPositionItem.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.BeginGroup = true;
+            this.bindingNavigatorMoveNextItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.HotFontBold = true;
+            this.btnNuevo.HotFontUnderline = true;
+            this.btnNuevo.HotForeColor = System.Drawing.Color.Black;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.HotFontBold = true;
+            this.btnGuardar.HotFontUnderline = true;
+            this.btnGuardar.HotForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.HotFontBold = true;
+            this.btnLimpiar.HotFontUnderline = true;
+            this.btnLimpiar.HotForeColor = System.Drawing.Color.Black;
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.HotFontBold = true;
+            this.btnEliminar.HotFontUnderline = true;
+            this.btnEliminar.HotForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.HoverImage")));
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(566, 14);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(112, 53);
+            this.btnSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSalir.TabIndex = 16;
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.Location = new System.Drawing.Point(5, 197);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(155, 23);
+            this.labelX1.TabIndex = 14;
+            this.labelX1.Text = "Todas las áreas:";
+            // 
+            // dgvAreas
+            // 
+            this.dgvAreas.AllowUserToAddRows = false;
+            this.dgvAreas.AllowUserToDeleteRows = false;
+            this.dgvAreas.AutoGenerateColumns = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAreas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvAreas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAreas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAreaDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.descripciónDataGridViewTextBoxColumn});
+            this.dgvAreas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvAreas.DataSource = this.catAreasBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAreas.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvAreas.EnableHeadersVisualStyles = false;
+            this.dgvAreas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvAreas.Location = new System.Drawing.Point(0, 220);
+            this.dgvAreas.Name = "dgvAreas";
+            this.dgvAreas.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAreas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvAreas.Size = new System.Drawing.Size(690, 225);
+            this.dgvAreas.TabIndex = 13;
             // 
             // idAreaDataGridViewTextBoxColumn
             // 
@@ -456,6 +423,39 @@
             this.descripciónDataGridViewTextBoxColumn.Name = "descripciónDataGridViewTextBoxColumn";
             this.descripciónDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 48);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Lucida Sans", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX2.Location = new System.Drawing.Point(81, 14);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(378, 29);
+            this.labelX2.TabIndex = 7;
+            this.labelX2.Text = "Panel de Catágolo de Áreas";
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            this.line1.Location = new System.Drawing.Point(5, 60);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(673, 25);
+            this.line1.TabIndex = 5;
+            this.line1.Text = "line1";
+            // 
             // CatAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,11 +466,11 @@
             this.Load += new System.EventHandler(this.CatAreas_Load);
             this.panelEx1.ResumeLayout(false);
             this.panelEx1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAreas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorEx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.catAreasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAreas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

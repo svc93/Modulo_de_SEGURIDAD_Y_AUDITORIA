@@ -15,7 +15,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 {
     public partial class CatAreas : UserControl
     { 
-        D_Seg_Areas datosAreas = new D_Seg_Areas();
+        D_Seg_EstadoLogin datosAreas = new D_Seg_EstadoLogin();
 
         public CatAreas()
         {
@@ -50,7 +50,8 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 
         private void CatAreas_Load(object sender, EventArgs e)
         {
-            catAreasBindingSource.DataSource = datosAreas.tCatAreas(); 
+            catAreasBindingSource.DataSource = datosAreas.tCatAreas();
+            cargarDatosNuevo();
         }
 
         private void cargarDatosNuevo()
@@ -74,11 +75,12 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             {
                 if (verificarCampos(false) == true)
                 {
-                    string nomArea, desArea; 
+                    string idArea, nomArea, desArea;
+                    idArea = txtIdArea.Text;
                     nomArea = txtNombre.Text;
                     desArea = txtDescripcion.Text; 
                     int respuesta = 0;
-                    respuesta = datosAreas.Insertar("0", nomArea, desArea);
+                    respuesta = datosAreas.Insertar(idArea, nomArea, desArea);
                     switch (respuesta)
                     {
                         case 1:
@@ -120,8 +122,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {
-
+        { 
             try
             {
                 if (verificarCampos(true) == true)

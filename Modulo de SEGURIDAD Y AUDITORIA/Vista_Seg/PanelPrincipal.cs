@@ -168,12 +168,12 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroShell1 = new DevComponents.DotNetBar.Metro.MetroShell();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.laApellido = new DevComponents.DotNetBar.LabelX();
+            this.laNombre = new DevComponents.DotNetBar.LabelX();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.line1 = new DevComponents.DotNetBar.Controls.Line();
             this.timerLogin = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.laNombre = new DevComponents.DotNetBar.LabelX();
-            this.laApellido = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -214,6 +214,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTilePanel1.Location = new System.Drawing.Point(0, 0);
             this.metroTilePanel1.Name = "metroTilePanel1";
             this.metroTilePanel1.Size = new System.Drawing.Size(877, 474);
+            this.metroTilePanel1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.metroTilePanel1.TabIndex = 0;
             this.metroTilePanel1.Text = "metroTilePanel1";
             // 
@@ -273,10 +274,11 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // metroTileItem13
             // 
             this.metroTileItem13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem13.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem13.Image")));
             this.metroTileItem13.Name = "metroTileItem13";
             this.metroTileItem13.SymbolColor = System.Drawing.Color.Empty;
             this.metroTileItem13.Text = "Acciones de RRHH";
-            this.metroTileItem13.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            this.metroTileItem13.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
             // 
             // 
             // 
@@ -285,6 +287,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // metroTileItem14
             // 
             this.metroTileItem14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileItem14.Image = ((System.Drawing.Image)(resources.GetObject("metroTileItem14.Image")));
             this.metroTileItem14.Name = "metroTileItem14";
             this.metroTileItem14.SymbolColor = System.Drawing.Color.Empty;
             this.metroTileItem14.Text = "Contratación y Expediente";
@@ -302,7 +305,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTileItem15.Name = "metroTileItem15";
             this.metroTileItem15.SymbolColor = System.Drawing.Color.Empty;
             this.metroTileItem15.Text = "Selección";
-            this.metroTileItem15.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
+            this.metroTileItem15.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
             // 
             // 
             // 
@@ -315,7 +318,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.metroTileItem16.Name = "metroTileItem16";
             this.metroTileItem16.SymbolColor = System.Drawing.Color.Empty;
             this.metroTileItem16.Text = "Gestión de Capacitaciones";
-            this.metroTileItem16.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blue;
+            this.metroTileItem16.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blueish;
             // 
             // 
             // 
@@ -334,11 +337,12 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.Seguridad.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMetroUsuarios,
             this.metroCatAreas,
+            this.metroCatEstLogin,
+            this.metroTileItem10,
+            this.metroEmpleados,
             this.metroTileItem3,
             this.metroTileItem4,
-            this.metroTileItem1,
-            this.metroEmpleados,
-            this.metroTileItem10});
+            this.metroTileItem1});
             this.Seguridad.Text = "Seguridad";
             // 
             // 
@@ -434,7 +438,6 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.Auditoria.MultiLine = true;
             this.Auditoria.Name = "Auditoria";
             this.Auditoria.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroCatEstLogin,
             this.metroTileItem6,
             this.metroTileItem7});
             // 
@@ -566,6 +569,38 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 9;
             // 
+            // laApellido
+            // 
+            // 
+            // 
+            // 
+            this.laApellido.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.laApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laApellido.ForeColor = System.Drawing.Color.Black;
+            this.laApellido.Location = new System.Drawing.Point(594, 27);
+            this.laApellido.Name = "laApellido";
+            this.laApellido.Size = new System.Drawing.Size(177, 23);
+            this.laApellido.TabIndex = 4;
+            this.laApellido.Text = "Apellido";
+            this.laApellido.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.laApellido.TextLineAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // laNombre
+            // 
+            // 
+            // 
+            // 
+            this.laNombre.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.laNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laNombre.ForeColor = System.Drawing.Color.Black;
+            this.laNombre.Location = new System.Drawing.Point(594, 3);
+            this.laNombre.Name = "laNombre";
+            this.laNombre.Size = new System.Drawing.Size(177, 23);
+            this.laNombre.TabIndex = 3;
+            this.laNombre.Text = "Nombre";
+            this.laNombre.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.laNombre.TextLineAlignment = System.Drawing.StringAlignment.Far;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -596,34 +631,6 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // laNombre
-            // 
-            // 
-            // 
-            // 
-            this.laNombre.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.laNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laNombre.Location = new System.Drawing.Point(594, 3);
-            this.laNombre.Name = "laNombre";
-            this.laNombre.Size = new System.Drawing.Size(177, 23);
-            this.laNombre.TabIndex = 3;
-            this.laNombre.Text = "Nombre";
-            this.laNombre.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // laApellido
-            // 
-            // 
-            // 
-            // 
-            this.laApellido.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.laApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laApellido.Location = new System.Drawing.Point(594, 31);
-            this.laApellido.Name = "laApellido";
-            this.laApellido.Size = new System.Drawing.Size(177, 23);
-            this.laApellido.TabIndex = 4;
-            this.laApellido.Text = "Apellido";
-            this.laApellido.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // PanelPrincipal
             // 

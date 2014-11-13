@@ -1,5 +1,19 @@
 
 
+
+create procedure loginUsuarios
+@usuario varchar(50),@contra varchar(50)
+as
+SELECT  
+(SELECT dbo.Empleados.Nombres FROM dbo.Empleados WHERE dbo.Empleados.IDEmpleado = usa.Cédula) as 'Nombre', 
+dbo.Empleados.Apellidos,
+dbo.Usuario.Cédula
+FROM dbo.Usuario usa
+where nombre=@nombre and apellido=@apellido
+
+
+
+
 create procedure empleadosTabla 
 as 
 SELECT  [IDEmpleado]
@@ -18,6 +32,7 @@ FROM dbo.Empleados emp
 
 
 
+
 create procedure empleadosTabla 
 @usuario varchar(50),@contra varchar(50)
 as
@@ -26,6 +41,7 @@ SELECT
 (SELECT dbo.Empleados.Apellidos FROM dbo.Empleados WHERE dbo.Empleados.IDEmpleado = usa.Cédula) as 'Apellidos'
 FROM dbo.Usuario usa
 WHERE IdUsuario=@usuario and Contraseña=@contra
+
 
 
 create procedure buscarEmpleado 
@@ -45,3 +61,56 @@ SELECT  [IDEmpleado]
 (SELECT dbo.Cat_Estado_Civil.Nombre FROM dbo.Cat_Estado_Civil WHERE dbo.Cat_Estado_Civil.IdEstadoCivil = emp.EstadoCivil) as 'EstadoCivilNombre'
 FROM dbo.Empleados emp
 WHERE IDEmpleado=@idEmpleado
+
+
+
+create procedure buscarArea
+@idArea varchar(50)
+as 
+SELECT  IdArea
+FROM dbo.Cat_Areas
+WHERE IdArea=@idArea
+
+
+
+create procedure buscarEstado
+@idEstado varchar(50)
+as 
+SELECT  IdEstadoLogin
+FROM dbo.EstadoLogin
+WHERE IdEstadoLogin=@idEstado
+
+
+
+create procedure buscarEstadoUSO
+@idEstado varchar(50)
+as 
+SELECT  IdEstadoLogin
+FROM dbo.Usuario
+WHERE IdEstadoLogin=@idEstado
+
+
+
+create procedure usuarioEstados
+as 
+SELECT  [IdUsuario]
+      ,[Contraseña]
+      ,[Cédula]
+      ,[IdEstadoLogin],
+(SELECT dbo.Cat_Estado_Civil.Nombre FROM dbo.Cat_Estado_Civil 
+WHERE dbo.Cat_Estado_Civil.IdEstadoCivil = usa.IdEstadoLogin) as 'EstadoCivilNombre'
+FROM dbo.Usuario usa
+
+
+
+
+create procedure buscarUsuario 
+@usuario varchar(50)
+as
+SELECT  IdUsuario
+FROM dbo.Usuario usa
+WHERE IdUsuario=@usuario
+
+
+
+
