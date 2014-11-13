@@ -31,5 +31,7 @@
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem15;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem16;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevComponents.DotNetBar.LabelX laApellido;
+        private DevComponents.DotNetBar.LabelX laNombre;
     }
 }

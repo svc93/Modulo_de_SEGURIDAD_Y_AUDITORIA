@@ -25,7 +25,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 
         LoginUsuario loginForm = null;
 
-        Datos.Usuario ClassUser = new Datos.Usuario();
+        Datos.D_Seg_Usuario ClassUser = new Datos.D_Seg_Usuario();
         Boolean loginCorrecto = false;
 
         public PanelPrincipal()
@@ -172,6 +172,8 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.line1 = new DevComponents.DotNetBar.Controls.Line();
             this.timerLogin = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.laNombre = new DevComponents.DotNetBar.LabelX();
+            this.laApellido = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -485,7 +487,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             // metroShell1
             // 
-            this.metroShell1.BackColor = System.Drawing.Color.DimGray;
+            this.metroShell1.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -547,6 +549,8 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer1.Panel1.Controls.Add(this.laApellido);
+            this.splitContainer1.Panel1.Controls.Add(this.laNombre);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.labelX1);
             this.splitContainer1.Panel1.Controls.Add(this.line1);
@@ -554,7 +558,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.splitContainer1.Panel2.Controls.Add(this.metroTilePanel1);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.Black;
             this.splitContainer1.Size = new System.Drawing.Size(877, 534);
@@ -593,9 +597,37 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // laNombre
+            // 
+            // 
+            // 
+            // 
+            this.laNombre.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.laNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laNombre.Location = new System.Drawing.Point(594, 3);
+            this.laNombre.Name = "laNombre";
+            this.laNombre.Size = new System.Drawing.Size(177, 23);
+            this.laNombre.TabIndex = 3;
+            this.laNombre.Text = "Nombre";
+            this.laNombre.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // laApellido
+            // 
+            // 
+            // 
+            // 
+            this.laApellido.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.laApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.laApellido.Location = new System.Drawing.Point(594, 31);
+            this.laApellido.Name = "laApellido";
+            this.laApellido.Size = new System.Drawing.Size(177, 23);
+            this.laApellido.TabIndex = 4;
+            this.laApellido.Text = "Apellido";
+            this.laApellido.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
             // PanelPrincipal
             // 
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(879, 569);
             this.Controls.Add(this.metroShell1);
             this.Controls.Add(this.splitContainer1);
@@ -625,6 +657,8 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
                 loginForm.Commandos = null;
                 loginForm.Dispose();
                 loginForm = null;
+                laApellido.Text = ClassUser.apellidos;
+                laNombre.Text = ClassUser.nombres;
             }
             else
             {

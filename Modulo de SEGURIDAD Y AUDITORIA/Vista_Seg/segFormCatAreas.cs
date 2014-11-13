@@ -12,9 +12,9 @@ using Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos;
 
 namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 {
-    public partial class CatEstadosLogin : UserControl
+    public partial class CatAreas : UserControl
     {
-        public CatEstadosLogin()
+        public CatAreas()
         {
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
         {
             if (nuevoValor != null)
             {
-                btnSalir.Command = nuevoValor.CatEstadosLogin.CerrarEstadosLogin;
+                btnSalir.Command = nuevoValor.CatAreas.CerrarArea;
             }
             else
             {
@@ -45,14 +45,12 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             }
         }
 
-
-        
-
-        private void CatEstadosLogin_Load(object sender, EventArgs e)
+        private void CatAreas_Load(object sender, EventArgs e)
         {
-            Usuario datosUsuario = new Usuario();
-            estadoLoginBindingSource.DataSource = datosUsuario.tEstadosLogin(); 
+            D_Seg_Areas datosAreas = new D_Seg_Areas();
+            catAreasBindingSource.DataSource = datosAreas.tCatAreas(); 
         }
+
 
     }
 }

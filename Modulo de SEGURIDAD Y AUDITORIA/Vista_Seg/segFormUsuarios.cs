@@ -49,7 +49,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-            Usuario datosUsuarios = new Usuario();
+            D_Seg_Usuario datosUsuarios = new D_Seg_Usuario();
             usuarioBindingSource1.DataSource = datosUsuarios.tUsuarios(); 
         }
 

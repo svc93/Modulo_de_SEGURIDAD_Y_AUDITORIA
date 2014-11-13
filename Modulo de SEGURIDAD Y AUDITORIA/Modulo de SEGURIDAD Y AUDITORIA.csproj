@@ -58,62 +58,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\Areas.cs" />
-    <Compile Include="Datos\Dataset\SISTEMADataSet.cs">
+    <Compile Include="Datos_Seg\D_Seg_Areas.cs" />
+    <Compile Include="Datos_Seg\Dataset\SISTEMADataSet.cs">
       <DependentUpon>SISTEMADataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Datos\Dataset\SISTEMADataSet.Designer.cs">
+    <Compile Include="Datos_Seg\Dataset\SISTEMADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SISTEMADataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Datos\Empleado.cs" />
-    <Compile Include="Datos\Usuario.cs" />
-    <Compile Include="Vista\CatAreas.cs">
+    <Compile Include="Datos_Seg\D_Seg_Empleado.cs" />
+    <Compile Include="Datos_Seg\D_Seg_Usuario.cs" />
+    <Compile Include="Vista_Seg\segFormCatAreas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vista\CatAreas.Designer.cs">
-      <DependentUpon>CatAreas.cs</DependentUpon>
+    <Compile Include="Vista_Seg\segFormCatAreas.Designer.cs">
+      <DependentUpon>segFormCatAreas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\CatEstadosLogin.cs">
+    <Compile Include="Vista_Seg\segFormCatEstadosLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vista\CatEstadosLogin.Designer.cs">
-      <DependentUpon>CatEstadosLogin.cs</DependentUpon>
+    <Compile Include="Vista_Seg\segFormCatEstadosLogin.Designer.cs">
+      <DependentUpon>segFormCatEstadosLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Empleados.cs">
+    <Compile Include="Vista_Seg\segFormEmpleados.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vista\Empleados.Designer.cs">
-      <DependentUpon>Empleados.cs</DependentUpon>
+    <Compile Include="Vista_Seg\segFormEmpleados.Designer.cs">
+      <DependentUpon>segFormEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\LoginUsuario.cs">
+    <Compile Include="Vista_Seg\LoginUsuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vista\LoginUsuario.Designer.cs">
+    <Compile Include="Vista_Seg\LoginUsuario.Designer.cs">
       <DependentUpon>LoginUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\MetroComandos.cs" />
+    <Compile Include="Vista_Seg\MetroComandos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\NuevoUsuario.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Vista\NuevoUsuario.Designer.cs">
-      <DependentUpon>NuevoUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\PanelPrincipal.cs">
+    <Compile Include="Vista_Seg\PanelPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\PanelPrincipal.Designer.cs">
+    <Compile Include="Vista_Seg\PanelPrincipal.Designer.cs">
       <DependentUpon>PanelPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Usuarios.cs">
+    <Compile Include="Vista_Seg\segFormUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vista\Usuarios.Designer.cs">
-      <DependentUpon>Usuarios.cs</DependentUpon>
+    <Compile Include="Vista_Seg\segFormUsuarios.Designer.cs">
+      <DependentUpon>segFormUsuarios.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,26 +118,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vista\CatAreas.resx">
-      <DependentUpon>CatAreas.cs</DependentUpon>
+    <EmbeddedResource Include="Vista_Seg\segFormCatAreas.resx">
+      <DependentUpon>segFormCatAreas.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\CatEstadosLogin.resx">
-      <DependentUpon>CatEstadosLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Vista_Seg\segFormCatEstadosLogin.resx">
+      <DependentUpon>segFormCatEstadosLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Empleados.resx">
-      <DependentUpon>Empleados.cs</DependentUpon>
+    <EmbeddedResource Include="Vista_Seg\segFormEmpleados.resx">
+      <DependentUpon>segFormEmpleados.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\LoginUsuario.resx">
+    <EmbeddedResource Include="Vista_Seg\LoginUsuario.resx">
       <DependentUpon>LoginUsuario.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\NuevoUsuario.resx">
-      <DependentUpon>NuevoUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\PanelPrincipal.resx">
+    <EmbeddedResource Include="Vista_Seg\PanelPrincipal.resx">
       <DependentUpon>PanelPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Usuarios.resx">
-      <DependentUpon>Usuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Vista_Seg\segFormUsuarios.resx">
+      <DependentUpon>segFormUsuarios.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -154,23 +151,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Datos\Dataset\SISTEMADataSet.xsc">
+    <None Include="Datos_Seg\Dataset\SISTEMADataSet.xsc">
       <DependentUpon>SISTEMADataSet.xsd</DependentUpon>
     </None>
-    <None Include="Datos\Dataset\SISTEMADataSet.xsd">
+    <None Include="Datos_Seg\Dataset\SISTEMADataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SISTEMADataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Datos\Dataset\SISTEMADataSet.xss">
+    <None Include="Datos_Seg\Dataset\SISTEMADataSet.xss">
       <DependentUpon>SISTEMADataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Datos\Dataset\App.config" />
+    <None Include="Datos_Seg\Dataset\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Reglas\" />
+    <Folder Include="Reglas_Seg\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

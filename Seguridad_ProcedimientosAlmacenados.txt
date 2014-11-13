@@ -1,0 +1,47 @@
+
+
+create procedure empleadosTabla 
+as 
+SELECT  [IDEmpleado]
+      ,[IdDocumentos]
+      ,[Nombres]
+      ,[Apellidos]
+      ,[Edad]
+      ,[Sexo],      
+      CASE [Sexo]
+      WHEN 0 THEN 'Femenimo'
+      WHEN 1 THEN 'Masculino'
+	  END AS sexoNombre
+      ,[EstadoCivil],
+(SELECT dbo.Cat_Estado_Civil.Nombre FROM dbo.Cat_Estado_Civil WHERE dbo.Cat_Estado_Civil.IdEstadoCivil = emp.EstadoCivil) as 'EstadoCivilNombre'
+FROM dbo.Empleados emp
+
+
+
+create procedure empleadosTabla 
+@usuario varchar(50),@contra varchar(50)
+as
+SELECT  
+(SELECT dbo.Empleados.Nombres FROM dbo.Empleados WHERE dbo.Empleados.IDEmpleado = usa.Cédula) as 'Nombres', 
+(SELECT dbo.Empleados.Apellidos FROM dbo.Empleados WHERE dbo.Empleados.IDEmpleado = usa.Cédula) as 'Apellidos'
+FROM dbo.Usuario usa
+WHERE IdUsuario=@usuario and Contraseña=@contra
+
+
+create procedure buscarEmpleado 
+@idEmpleado varchar(50)
+as 
+SELECT  [IDEmpleado]
+      ,[IdDocumentos]
+      ,[Nombres]
+      ,[Apellidos]
+      ,[Edad]
+      ,[Sexo],      
+      CASE [Sexo]
+      WHEN 0 THEN 'Femenimo'
+      WHEN 1 THEN 'Masculino'
+	  END AS sexoNombre
+      ,[EstadoCivil],
+(SELECT dbo.Cat_Estado_Civil.Nombre FROM dbo.Cat_Estado_Civil WHERE dbo.Cat_Estado_Civil.IdEstadoCivil = emp.EstadoCivil) as 'EstadoCivilNombre'
+FROM dbo.Empleados emp
+WHERE IDEmpleado=@idEmpleado
