@@ -29,8 +29,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Datos
             bs.DataSource = empleadosdt;
             return bs;
         }
-         
-
+          
         private Boolean busqueda(String idEmpleado)
         {  
             SISTEMADataSet.buscarEmpleadoDataTable empleadosdt = new SISTEMADataSet.buscarEmpleadoDataTable();

@@ -66,8 +66,7 @@ namespace Modulo_de_SEGURIDAD_Y_AUDITORIA.Vista
             bindingNavigatorEx1.BindingSource = Emp.cargarProcedimiento();
             dgvEmpleados.DataSource = Emp.cargarProcedimiento();
         }
-
-
+         
         private MetroComandos _Comandos;
         
         public MetroComandos Commandos
